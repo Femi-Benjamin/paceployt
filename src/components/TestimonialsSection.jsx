@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ScrollReveal from './ScrollReveal';
 import { Star, Quote, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function TestimonialsSection() {
@@ -79,25 +80,28 @@ export default function TestimonialsSection() {
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         
         {/* Section Header */}
-        <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 3rem auto' }}>
-          <div className="badge-pill badge-purple" style={{ marginBottom: '1rem' }}>
-            <MessageSquare size={14} /> Client & Partner Feedback
+        <ScrollReveal variant="fade-up" delay={50}>
+          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 3rem auto' }}>
+            <div className="badge-pill badge-purple" style={{ marginBottom: '1rem' }}>
+              <MessageSquare size={14} /> Client & Partner Feedback
+            </div>
+            <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.2 }}>
+              What People Say About <span className="gradient-text-purple">Paceployt</span>
+            </h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.95rem, 1.8vw, 1.1rem)' }}>
+              Explore verified reviews from our clients & partners.
+            </p>
           </div>
-          <h2 style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.2 }}>
-            What People Say About <span className="gradient-text-purple">Paceployt</span>
-          </h2>
-          <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.95rem, 1.8vw, 1.1rem)' }}>
-            Explore verified reviews from our clients & partners.
-          </p>
-        </div>
+        </ScrollReveal>
 
         {/* 3D Coverflow Container */}
-        <div
-          style={{
-            position: 'relative',
-            height: isMobile ? '400px' : isTablet ? '440px' : '470px',
-            maxWidth: '1100px',
-            margin: '0 auto',
+        <ScrollReveal variant="scale-up" delay={150}>
+          <div
+            style={{
+              position: 'relative',
+              height: isMobile ? '400px' : isTablet ? '440px' : '470px',
+              maxWidth: '1100px',
+              margin: '0 auto',
             perspective: '1200px',
             display: 'flex',
             alignItems: 'center',
@@ -407,6 +411,7 @@ export default function TestimonialsSection() {
             <ChevronRight size={20} />
           </button>
         </div>
+        </ScrollReveal>
 
       </div>
     </section>

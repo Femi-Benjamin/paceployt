@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ScrollReveal from "./ScrollReveal";
 import {
   Code2,
   Briefcase,
@@ -80,98 +81,103 @@ export default function DivisionsSection({ onOpenContact }) {
 
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
         {/* Section Header */}
-        <div
-          style={{
-            textAlign: "center",
-            maxWidth: "800px",
-            margin: "0 auto 3.5rem auto",
-          }}
-        >
+        <ScrollReveal variant="fade-up" delay={50}>
           <div
-            className="badge-pill badge-purple"
-            style={{ marginBottom: "1rem" }}
-          >
-            <ShieldCheck size={14} /> Ecosystem Divisions
-          </div>
-          <h2
             style={{
-              fontSize: "clamp(2.2rem, 4.5vw, 3.5rem)",
-              fontWeight: 800,
-              marginBottom: "1rem",
+              textAlign: "center",
+              maxWidth: "800px",
+              margin: "0 auto 3.5rem auto",
             }}
           >
-            Explore Our{" "}
-            <span className="gradient-text-purple">Enterprise Divisions</span>
-          </h2>
-          <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
-            Discover how Paceployt operates across multidisciplinary sectors
-            with tech at the core.
-          </p>
-        </div>
+            <div
+              className="badge-pill badge-purple"
+              style={{ marginBottom: "1rem" }}
+            >
+              <ShieldCheck size={14} /> Ecosystem Divisions
+            </div>
+            <h2
+              style={{
+                fontSize: "clamp(2.2rem, 4.5vw, 3.5rem)",
+                fontWeight: 800,
+                marginBottom: "1rem",
+              }}
+            >
+              Explore Our{" "}
+              <span className="gradient-text-purple">Enterprise Divisions</span>
+            </h2>
+            <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
+              Discover how Paceployt operates across multidisciplinary sectors
+              with tech at the core.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Division Selection Tabs */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "1rem",
-            marginBottom: "3rem",
-            flexWrap: "wrap",
-          }}
-        >
-          {Object.values(divisions).map((div) => {
-            const TabIcon = div.icon;
-            const isActive = activeTab === div.id;
-            return (
-              <button
-                key={div.id}
-                onClick={() => setActiveTab(div.id)}
-                className="glass-card-elevated"
-                style={{
-                  padding: "1rem 1.75rem",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.75rem",
-                  border: isActive
-                    ? `2px solid ${div.color}`
-                    : "1px solid rgba(255, 255, 255, 0.08)",
-                  background: isActive
-                    ? "linear-gradient(145deg, rgba(40, 20, 80, 0.9) 0%, rgba(15, 8, 32, 0.95) 100%)"
-                    : "rgba(18, 11, 36, 0.75)",
-                  cursor: "pointer",
-                  borderRadius: "16px",
-                }}
-              >
-                <div
-                  style={{ color: isActive ? div.color : "var(--text-muted)" }}
-                >
-                  <TabIcon size={20} />
-                </div>
-                <span
+        <ScrollReveal variant="fade-up" delay={150}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: "1rem",
+              marginBottom: "3rem",
+              flexWrap: "wrap",
+            }}
+          >
+            {Object.values(divisions).map((div) => {
+              const TabIcon = div.icon;
+              const isActive = activeTab === div.id;
+              return (
+                <button
+                  key={div.id}
+                  onClick={() => setActiveTab(div.id)}
+                  className="glass-card-elevated"
                   style={{
-                    fontWeight: 800,
-                    color: isActive ? "#ffffff" : "var(--text-muted)",
-                    fontSize: "0.95rem",
+                    padding: "1rem 1.75rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.75rem",
+                    border: isActive
+                      ? `2px solid ${div.color}`
+                      : "1px solid rgba(255, 255, 255, 0.08)",
+                    background: isActive
+                      ? "linear-gradient(145deg, rgba(40, 20, 80, 0.9) 0%, rgba(15, 8, 32, 0.95) 100%)"
+                      : "rgba(18, 11, 36, 0.75)",
+                    cursor: "pointer",
+                    borderRadius: "16px",
                   }}
                 >
-                  {div.name}
-                </span>
-              </button>
-            );
-          })}
-        </div>
+                  <div
+                    style={{ color: isActive ? div.color : "var(--text-muted)" }}
+                  >
+                    <TabIcon size={20} />
+                  </div>
+                  <span
+                    style={{
+                      fontWeight: 800,
+                      color: isActive ? "#ffffff" : "var(--text-muted)",
+                      fontSize: "0.95rem",
+                    }}
+                  >
+                    {div.name}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </ScrollReveal>
 
         {/* Division Detail Hero Card */}
-        <div
-          className="glass-card-elevated"
-          style={{
-            padding: "3rem 2.5rem",
-            background:
-              "linear-gradient(145deg, rgba(28, 15, 56, 0.95) 0%, rgba(12, 6, 26, 0.98) 100%)",
-            border: `1px solid ${current.color}40`,
-            boxShadow: `0 25px 60px ${current.color}20`,
-          }}
-        >
+        <ScrollReveal variant="scale-up" delay={250}>
+          <div
+            className="glass-card-elevated"
+            style={{
+              padding: "3rem 2.5rem",
+              background:
+                "linear-gradient(145deg, rgba(28, 15, 56, 0.95) 0%, rgba(12, 6, 26, 0.98) 100%)",
+              border: `1px solid ${current.color}40`,
+              boxShadow: `0 25px 60px ${current.color}20`,
+            }}
+          >
           <div
             className="grid-2"
             style={{ gap: "3.5rem", alignItems: "center" }}
@@ -288,6 +294,7 @@ export default function DivisionsSection({ onOpenContact }) {
             </div>
           </div>
         </div>
+      </ScrollReveal>
       </div>
     </section>
   );

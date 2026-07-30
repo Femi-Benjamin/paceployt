@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import ScrollReveal from "./ScrollReveal";
 import {
   ArrowRight,
+
   Sparkles,
   Code2,
   Cpu,
@@ -89,82 +91,87 @@ export default function Hero({ onOpenContact }) {
         {/* Parent Group Badge */}
 
         {/* Hero Headline */}
-        <div
-          style={{ textAlign: "center", maxWidth: "950px", margin: "0 auto" }}
-        >
-          <h1
-            style={{
-              fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)",
-              fontWeight: 800,
-              lineHeight: 1.1,
-              marginBottom: "1.5rem",
-              letterSpacing: "-0.03em",
-            }}
-          >
-            Pioneering Multidisciplinary Excellence Across{" "}
-            <span className="gradient-text-purple">
-              Tech, Business & Real Estate
-            </span>
-          </h1>
+        <div style={{ textAlign: "center", maxWidth: "950px", margin: "0 auto" }}>
+          <ScrollReveal variant="fade-up" delay={50}>
+            <h1
+              style={{
+                fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)",
+                fontWeight: 800,
+                lineHeight: 1.1,
+                marginBottom: "1.5rem",
+                letterSpacing: "-0.03em",
+              }}
+            >
+              Pioneering Multidisciplinary Excellence Across{" "}
+              <span className="gradient-text-purple">
+                Tech, Business & Real Estate
+              </span>
+            </h1>
+          </ScrollReveal>
 
-          <p
-            style={{
-              fontSize: "clamp(1.05rem, 2vw, 1.25rem)",
-              color: "var(--text-muted)",
-              maxWidth: "800px",
-              margin: "0 auto 2.5rem auto",
-              lineHeight: 1.6,
-            }}
-          >
-            <strong style={{ color: "#ffffff" }}>Paceployt</strong> operates as
-            a parent conglomerate shaping the future of global industries. While
-            we drive impact in corporate consulting and premier real estate, our
-            strength is in{" "}
-            <span style={{ color: "#c084fc", fontWeight: 700 }}>
-              cutting-edge technology & digital engineering
-            </span>
-            .
-          </p>
+          <ScrollReveal variant="fade-up" delay={150}>
+            <p
+              style={{
+                fontSize: "clamp(1.05rem, 2vw, 1.25rem)",
+                color: "var(--text-muted)",
+                maxWidth: "800px",
+                margin: "0 auto 2.5rem auto",
+                lineHeight: 1.6,
+              }}
+            >
+              <strong style={{ color: "#ffffff" }}>Paceployt</strong> operates as
+              a parent conglomerate shaping the future of global industries. While
+              we drive impact in corporate consulting and premier real estate, our
+              strength is in{" "}
+              <span style={{ color: "#c084fc", fontWeight: 700 }}>
+                cutting-edge technology & digital engineering
+              </span>
+              .
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Dual Primary CTAs */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "1.25rem",
-            flexWrap: "wrap",
-            marginBottom: "3.5rem",
-          }}
-        >
-          <button
-            onClick={onOpenContact}
-            className="btn-primary"
-            style={{ padding: "1rem 2.4rem", fontSize: "1.05rem" }}
+        <ScrollReveal variant="fade-up" delay={250}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "1.25rem",
+              flexWrap: "wrap",
+              marginBottom: "3.5rem",
+            }}
           >
-            Get Started with Paceployt <ArrowRight size={20} />
-          </button>
+            <button
+              onClick={onOpenContact}
+              className="btn-primary"
+              style={{ padding: "1rem 2.4rem", fontSize: "1.05rem" }}
+            >
+              Get Started with Paceployt <ArrowRight size={20} />
+            </button>
 
-          <a
-            href="#about"
-            className="btn-secondary"
-            style={{ padding: "1rem 2.4rem", fontSize: "1.05rem" }}
-          >
-            Discover What We Do
-          </a>
-        </div>
+            <a
+              href="#about"
+              className="btn-secondary"
+              style={{ padding: "1rem 2.4rem", fontSize: "1.05rem" }}
+            >
+              Discover What We Do
+            </a>
+          </div>
+        </ScrollReveal>
 
         {/* Elevated Sector Showcase Panel */}
-        <div
-          className="glass-card-elevated"
-          style={{
-            padding: "2rem 2.25rem",
-            maxWidth: "1100px",
-            margin: "0 auto",
-            position: "relative",
-          }}
-        >
+        <ScrollReveal variant="scale-up" delay={320}>
+          <div
+            className="glass-card-elevated"
+            style={{
+              padding: "2rem 2.25rem",
+              maxWidth: "1100px",
+              margin: "0 auto",
+              position: "relative",
+            }}
+          >
           <div
             style={{
               display: "flex",
@@ -316,6 +323,7 @@ export default function Hero({ onOpenContact }) {
             </div>
           </div>
         </div>
+      </ScrollReveal>
 
         {/* Global Key Stats Bar */}
         <div
@@ -326,110 +334,118 @@ export default function Hero({ onOpenContact }) {
             margin: "3.5rem auto 0 auto",
           }}
         >
-          <div
-            className="glass-card-elevated"
-            style={{ padding: "1.5rem", textAlign: "center" }}
-          >
+          <ScrollReveal variant="fade-up" delay={100}>
             <div
-              style={{
-                fontSize: "2.4rem",
-                fontWeight: 800,
-                color: "#c084fc",
-                fontFamily: "var(--font-heading)",
-              }}
+              className="glass-card-elevated"
+              style={{ padding: "1.5rem", textAlign: "center" }}
             >
-              <AnimatedCounter end={61} suffix="+" duration={2200} />
+              <div
+                style={{
+                  fontSize: "2.4rem",
+                  fontWeight: 800,
+                  color: "#c084fc",
+                  fontFamily: "var(--font-heading)",
+                }}
+              >
+                <AnimatedCounter end={61} suffix="+" duration={2200} />
+              </div>
+              <div
+                style={{
+                  fontSize: "0.85rem",
+                  color: "var(--text-muted)",
+                  fontWeight: 600,
+                }}
+              >
+                Projects Delivered
+              </div>
             </div>
-            <div
-              style={{
-                fontSize: "0.85rem",
-                color: "var(--text-muted)",
-                fontWeight: 600,
-              }}
-            >
-              Projects Delivered
-            </div>
-          </div>
+          </ScrollReveal>
 
-          <div
-            className="glass-card-elevated"
-            style={{ padding: "1.5rem", textAlign: "center" }}
-          >
+          <ScrollReveal variant="fade-up" delay={200}>
             <div
-              style={{
-                fontSize: "2.4rem",
-                fontWeight: 800,
-                color: "#a855f7",
-                fontFamily: "var(--font-heading)",
-              }}
+              className="glass-card-elevated"
+              style={{ padding: "1.5rem", textAlign: "center" }}
             >
-              <AnimatedCounter end={500} suffix="+" duration={2200} />
+              <div
+                style={{
+                  fontSize: "2.4rem",
+                  fontWeight: 800,
+                  color: "#a855f7",
+                  fontFamily: "var(--font-heading)",
+                }}
+              >
+                <AnimatedCounter end={500} suffix="+" duration={2200} />
+              </div>
+              <div
+                style={{
+                  fontSize: "0.85rem",
+                  color: "var(--text-muted)",
+                  fontWeight: 600,
+                }}
+              >
+                Satisfied Clients & Partners
+              </div>
             </div>
-            <div
-              style={{
-                fontSize: "0.85rem",
-                color: "var(--text-muted)",
-                fontWeight: 600,
-              }}
-            >
-              Satisfied Clients & Partners
-            </div>
-          </div>
+          </ScrollReveal>
 
-          <div
-            className="glass-card-elevated"
-            style={{ padding: "1.5rem", textAlign: "center" }}
-          >
+          <ScrollReveal variant="fade-up" delay={300}>
             <div
-              style={{
-                fontSize: "2.4rem",
-                fontWeight: 800,
-                color: "var(--consult-amber)",
-                fontFamily: "var(--font-heading)",
-              }}
+              className="glass-card-elevated"
+              style={{ padding: "1.5rem", textAlign: "center" }}
             >
-              <AnimatedCounter
-                end={99.8}
-                suffix="%"
-                duration={2200}
-                decimals={1}
-              />
+              <div
+                style={{
+                  fontSize: "2.4rem",
+                  fontWeight: 800,
+                  color: "var(--consult-amber)",
+                  fontFamily: "var(--font-heading)",
+                }}
+              >
+                <AnimatedCounter
+                  end={99.8}
+                  suffix="%"
+                  duration={2200}
+                  decimals={1}
+                />
+              </div>
+              <div
+                style={{
+                  fontSize: "0.85rem",
+                  color: "var(--text-muted)",
+                  fontWeight: 600,
+                }}
+              >
+                Reliability & ROI Rate
+              </div>
             </div>
-            <div
-              style={{
-                fontSize: "0.85rem",
-                color: "var(--text-muted)",
-                fontWeight: 600,
-              }}
-            >
-              Reliability & ROI Rate
-            </div>
-          </div>
+          </ScrollReveal>
 
-          <div
-            className="glass-card-elevated"
-            style={{ padding: "1.5rem", textAlign: "center" }}
-          >
+          <ScrollReveal variant="fade-up" delay={400}>
             <div
-              style={{
-                fontSize: "2.4rem",
-                fontWeight: 800,
-                color: "var(--agri-emerald)",
-                fontFamily: "var(--font-heading)",
-              }}
+              className="glass-card-elevated"
+              style={{ padding: "1.5rem", textAlign: "center" }}
             >
-              <AnimatedCounter end={3} suffix=" Core" duration={1800} />
+              <div
+                style={{
+                  fontSize: "2.4rem",
+                  fontWeight: 800,
+                  color: "var(--agri-emerald)",
+                  fontFamily: "var(--font-heading)",
+                }}
+              >
+                <AnimatedCounter end={3} suffix=" Core" duration={1800} />
+              </div>
+              <div
+                style={{
+                  fontSize: "0.85rem",
+                  color: "var(--text-muted)",
+                  fontWeight: 600,
+                }}
+              >
+                Enterprise Sectors
+              </div>
             </div>
-            <div
-              style={{
-                fontSize: "0.85rem",
-                color: "var(--text-muted)",
-                fontWeight: 600,
-              }}
-            >
-              Enterprise Sectors
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
