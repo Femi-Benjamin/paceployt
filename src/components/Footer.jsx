@@ -29,25 +29,15 @@ export default function Footer({ onOpenContact }) {
                   marginBottom: "1.25rem",
                 }}
               >
-                <div
-                // style={{
-                //   padding: "0.2rem 0.5rem",
-                //   borderRadius: '12px',
-                //   background: "#ffffff",
-                //   display: "flex",
-                //   alignItems: "center",
-                //   justifyContent: "center",
-                //   boxShadow: "0 0 20px rgba(91, 26, 234, 0.4)",
-                //   border: "1px solid rgba(91, 26, 234, 0.3)",
-                // }}
-                >
-                  <img
-                    className="h-8.25 object-contain rounded-2xl"
-                    src="/images/logo.png"
-                    alt="Paceployt Ltd Logo"
-                    style={{ height: "36px", objectFit: "contain" }}
-                  />
-                </div>
+                <img
+                  src="/images/logo.png"
+                  alt="Paceployt Ltd Logo"
+                  style={{
+                    height: "36px",
+                    objectFit: "contain",
+                    borderRadius: "12px",
+                  }}
+                />
               </div>
 
               <p
@@ -63,21 +53,73 @@ export default function Footer({ onOpenContact }) {
                 innovation, and inspiring exploits that leave a lasting impact.
               </p>
 
-              <div style={{ display: "flex", gap: "0.75rem" }}>
+              <div
+                style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}
+              >
                 <a
                   href="https://wa.me/2348148042760"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-whatsapp"
-                  style={{ padding: "0.55rem 1.1rem", fontSize: "0.825rem" }}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "0.6rem",
+                    padding: "0.55rem 1.1rem",
+                    borderRadius: "9999px",
+                    background:
+                      "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+                    color: "#ffffff",
+                    fontWeight: 700,
+                    fontSize: "0.825rem",
+                    border: "none",
+                    cursor: "pointer",
+                    textDecoration: "none",
+                    transition: "all 0.3s ease",
+                    boxShadow: "0 4px 25px rgba(16, 185, 129, 0.35)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = "translateY(-2px)";
+                    e.target.style.boxShadow =
+                      "0 8px 35px rgba(16, 185, 129, 0.55)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = "translateY(0)";
+                    e.target.style.boxShadow =
+                      "0 4px 25px rgba(16, 185, 129, 0.35)";
+                  }}
                 >
                   <WhatsAppIcon size={16} /> WhatsApp
                 </a>
 
                 <a
                   href="mailto:paceploytltd@gmail.com"
-                  className="btn-secondary"
-                  style={{ padding: "0.55rem 1.1rem", fontSize: "0.825rem" }}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "0.6rem",
+                    padding: "0.55rem 1.1rem",
+                    borderRadius: "9999px",
+                    background: "rgba(255, 255, 255, 0.05)",
+                    color: "#ffffff",
+                    fontWeight: 600,
+                    fontSize: "0.825rem",
+                    border: "1px solid rgba(255, 255, 255, 0.15)",
+                    cursor: "pointer",
+                    textDecoration: "none",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = "rgba(255, 255, 255, 0.12)";
+                    e.target.style.borderColor = "rgba(91, 26, 234, 0.5)";
+                    e.target.style.transform = "translateY(-2px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = "rgba(255, 255, 255, 0.05)";
+                    e.target.style.borderColor = "rgba(255, 255, 255, 0.15)";
+                    e.target.style.transform = "translateY(0)";
+                  }}
                 >
                   <Mail size={16} /> Email Us
                 </a>
@@ -166,7 +208,7 @@ export default function Footer({ onOpenContact }) {
                 </li>
                 <li
                   style={{
-                    color: "var(--consult-amber)",
+                    color: "#f59e0b",
                     fontSize: "0.9rem",
                     fontWeight: 700,
                   }}
@@ -175,7 +217,7 @@ export default function Footer({ onOpenContact }) {
                 </li>
                 <li
                   style={{
-                    color: "var(--agri-emerald)",
+                    color: "#10b981",
                     fontSize: "0.9rem",
                     fontWeight: 700,
                   }}
@@ -233,7 +275,7 @@ export default function Footer({ onOpenContact }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    color: "var(--agri-emerald)",
+                    color: "#10b981",
                     textDecoration: "none",
                     fontWeight: 700,
                   }}
@@ -244,8 +286,33 @@ export default function Footer({ onOpenContact }) {
 
               <button
                 onClick={onOpenContact}
-                className="btn-primary"
-                style={{ padding: "0.65rem 1.25rem", fontSize: "0.85rem" }}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "0.6rem",
+                  padding: "0.65rem 1.25rem",
+                  borderRadius: "9999px",
+                  background:
+                    "linear-gradient(135deg, #5b1aea 0%, #7c3aed 50%, #9333ea 100%)",
+                  color: "#ffffff",
+                  fontWeight: 700,
+                  fontSize: "0.85rem",
+                  border: "none",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  boxShadow: "0 4px 25px rgba(91, 26, 234, 0.45)",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = "translateY(-2px)";
+                  e.target.style.boxShadow =
+                    "0 8px 35px rgba(91, 26, 234, 0.65)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = "translateY(0)";
+                  e.target.style.boxShadow =
+                    "0 4px 25px rgba(91, 26, 234, 0.45)";
+                }}
               >
                 Schedule Consultation <ArrowUpRight size={16} />
               </button>
@@ -259,7 +326,7 @@ export default function Footer({ onOpenContact }) {
             borderTop: "1px solid rgba(255, 255, 255, 0.08)",
             paddingTop: "2rem",
             display: "flex",
-            justify: "space-between",
+            justifyContent: "space-between",
             alignItems: "center",
             flexWrap: "wrap",
             gap: "1rem",
@@ -297,4 +364,9 @@ const footerLinkStyle = {
   textDecoration: "none",
   fontSize: "0.9rem",
   transition: "color 0.2s ease",
+};
+
+// Add hover effect for footer links
+footerLinkStyle[":hover"] = {
+  color: "#ffffff",
 };

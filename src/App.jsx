@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TrustMarquee from "./components/TrustMarquee";
 import AboutSection from "./components/AboutSection";
+import TeamSection from "./components/TeamSection";
 import DivisionsSection from "./components/DivisionsSection";
 import TechSpotlight from "./components/TechSpotlight";
 import PaveSpotlight from "./components/PaveSpotlight";
@@ -37,6 +38,7 @@ export default function App() {
         <Hero onOpenContact={handleOpenContact} />
         <TrustMarquee />
         <AboutSection onOpenContact={handleOpenContact} />
+        <TeamSection onOpenContact={handleOpenContact} />
         <DivisionsSection onOpenContact={handleOpenContact} />
         <TechSpotlight onOpenContact={handleOpenContact} />
         <PaveSpotlight onOpenContact={handleOpenContact} />
