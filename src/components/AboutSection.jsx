@@ -67,150 +67,161 @@ export default function AboutSection({ onOpenContact }) {
               border: "1px solid rgba(91, 26, 234, 0.35)",
             }}
           >
-          <div className="grid-2" style={{ alignItems: "center", gap: "3rem" }}>
-            {/* Left Copy Block */}
-            <div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.85rem",
-                  marginBottom: "1rem",
-                }}
-              >
+            <div
+              className="grid-2"
+              style={{ alignItems: "center", gap: "3rem" }}
+            >
+              {/* Left Copy Block */}
+              <div>
                 <div
                   style={{
-                    width: "46px",
-                    height: "46px",
-                    borderRadius: "12px",
-                    background: "rgba(91, 26, 234, 0.25)",
-                    color: "#c084fc",
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
+                    gap: "0.85rem",
+                    marginBottom: "1rem",
                   }}
                 >
-                  <Zap size={24} />
+                  <div
+                    style={{
+                      width: "46px",
+                      height: "46px",
+                      borderRadius: "12px",
+                      background: "rgba(91, 26, 234, 0.25)",
+                      color: "#c084fc",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <Zap size={24} />
+                  </div>
+                  <h3
+                    style={{
+                      fontSize: "1.6rem",
+                      fontWeight: 800,
+                      color: "#ffffff",
+                    }}
+                  >
+                    Paceployt Enterprise Overview
+                  </h3>
                 </div>
-                <h3
+
+                <p
                   style={{
-                    fontSize: "1.6rem",
-                    fontWeight: 800,
-                    color: "#ffffff",
+                    fontSize: "1.05rem",
+                    lineHeight: 1.75,
+                    color: "var(--text-main)",
+                    marginBottom: "1.25rem",
                   }}
                 >
-                  Paceployt Enterprise Overview
-                </h3>
+                  Paceployt operates as a parent conglomerate that spans
+                  multiple industries — including corporate consulting and real
+                  estate development — with our primary core strength and
+                  flagship leadership rooted in{" "}
+                  <strong style={{ color: "#c084fc" }}>
+                    cutting-edge technology and digital engineering
+                  </strong>
+                  .
+                </p>
+
+                <p
+                  style={{
+                    fontSize: "0.95rem",
+                    lineHeight: 1.7,
+                    color: "var(--text-muted)",
+                  }}
+                >
+                  Paceployt is a forward-thinking technology agency dedicated to
+                  delivering innovative solutions for businesses and
+                  individuals. From crafting bespoke websites and mobile
+                  applications to offering top-tier tech consultancy, we empower
+                  our clients to thrive in a digital-first world. Beyond
+                  delivering projects, we also shape the next generation of tech
+                  professionals through our Tech Academy. We provide hands-on
+                  training in Frontend Development (React.js), Backend
+                  Development (Node.js and PHP), and UI/UX Design (Figma). Our
+                  mission is simple: to set the pace in technology, push the
+                  boundaries of innovation, and inspire exploits that leave a
+                  lasting impact.
+                </p>
               </div>
 
-              <p
-                style={{
-                  fontSize: "1.05rem",
-                  lineHeight: 1.75,
-                  color: "var(--text-main)",
-                  marginBottom: "1.25rem",
-                }}
-              >
-                Paceployt operates as a parent conglomerate that spans multiple
-                industries — including corporate consulting and real estate
-                development — with our primary core strength and flagship
-                leadership rooted in{" "}
-                <strong style={{ color: "#c084fc" }}>
-                  cutting-edge technology and digital engineering
-                </strong>
-                .
-              </p>
-
-              <p
-                style={{
-                  fontSize: "0.95rem",
-                  lineHeight: 1.7,
-                  color: "var(--text-muted)",
-                }}
-              >
-                Paceployt is a forward-thinking technology agency dedicated to
-                delivering innovative solutions for businesses and individuals.
-                From crafting bespoke websites and mobile applications to
-                offering top-tier tech consultancy, we empower our clients to
-                thrive in a digital-first world. Beyond delivering projects, we
-                also shape the next generation of tech professionals through our
-                Tech Academy. We provide hands-on training in Frontend
-                Development (React.js), Backend Development (Node.js and PHP),
-                and UI/UX Design (Figma). Our mission is simple: to set the pace
-                in technology, push the boundaries of innovation, and inspire
-                exploits that leave a lasting impact.
-              </p>
-            </div>
-
-            {/* Right Visual Image: Enterprise HQ Conglomerate Building */}
-            <div>
-              <div
-                style={{
-                  borderRadius: "20px",
-                  overflow: "hidden",
-                  border: "1px solid rgba(168, 85, 247, 0.4)",
-                  boxShadow: "0 25px 50px rgba(0, 0, 0, 0.8)",
-                  position: "relative",
-                  height: "360px",
-                }}
-              >
-                <img
-                  src="/images/paceployt_logo_3d.jpg"
-                  alt="Paceployt Group Official Brand Emblem"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
+              {/* Right Visual Image: Enterprise HQ Conglomerate Building */}
+              <div>
                 <div
                   style={{
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                      "linear-gradient(to top, rgba(9,5,20,0.85) 0%, transparent 60%)",
-                  }}
-                ></div>
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "20px",
-                    left: "20px",
-                    right: "20px",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
+                    borderRadius: "20px",
+                    overflow: "hidden",
+                    border: "1px solid rgba(168, 85, 247, 0.4)",
+                    boxShadow: "0 25px 50px rgba(0, 0, 0, 0.8)",
+                    position: "relative",
+                    height: "360px",
                   }}
                 >
-                  <div>
-                    <div
-                      style={{
-                        fontSize: "1.15rem",
-                        fontWeight: 800,
-                        color: "#ffffff",
-                      }}
-                    >
-                      Paceployt
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "0.8rem",
-                        color: "#c084fc",
-                        fontWeight: 600,
-                      }}
-                    >
-                      Pioneering Multidisciplinary Conglomerate
+                  <img
+                    src="/images/paceployt_logo_3d.jpg"
+                    alt="Paceployt Group Official Brand Emblem"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background:
+                        "linear-gradient(to top, rgba(9,5,20,0.85) 0%, transparent 60%)",
+                    }}
+                  ></div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "20px",
+                      left: "20px",
+                      right: "20px",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div>
+                      <div
+                        style={{
+                          fontSize: "1.15rem",
+                          fontWeight: 800,
+                          color: "#ffffff",
+                        }}
+                      >
+                        Paceployt
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.8rem",
+                          color: "#c084fc",
+                          fontWeight: 600,
+                        }}
+                      >
+                        Pioneering Multidisciplinary Conglomerate
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </ScrollReveal>
+        </ScrollReveal>
 
         {/* 3 Multidisciplinary Core Pillars */}
         <div className="grid-3" style={{ gap: "2rem" }}>
           {/* Pillar 1: Tech Agency */}
           <ScrollReveal variant="fade-up" delay={100}>
-            <div className="glass-card-elevated" style={{ padding: "2.25rem", height: "100%" }}>
+            <div
+              className="glass-card-elevated"
+              style={{ padding: "2.25rem", height: "100%" }}
+            >
               <div
                 style={{
                   width: "48px",
@@ -273,18 +284,30 @@ export default function AboutSection({ onOpenContact }) {
                 }}
               >
                 <li
-                  style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
                 >
                   <CheckCircle2 size={16} color="#c084fc" /> React & Modern
                   Frontend
                 </li>
                 <li
-                  style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
                 >
                   <CheckCircle2 size={16} color="#c084fc" /> Node.js & PHP APIs
                 </li>
                 <li
-                  style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
                 >
                   <CheckCircle2 size={16} color="#c084fc" /> Custom Figma UI/UX
                   Design
@@ -295,7 +318,10 @@ export default function AboutSection({ onOpenContact }) {
 
           {/* Pillar 2: Corporate Consulting */}
           <ScrollReveal variant="fade-up" delay={200}>
-            <div className="glass-card-elevated" style={{ padding: "2.25rem", height: "100%" }}>
+            <div
+              className="glass-card-elevated"
+              style={{ padding: "2.25rem", height: "100%" }}
+            >
               <div
                 style={{
                   width: "48px",
@@ -357,19 +383,31 @@ export default function AboutSection({ onOpenContact }) {
                 }}
               >
                 <li
-                  style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
                 >
-                  <CheckCircle2 size={16} color="var(--consult-amber)" /> Digital
-                  Transformation Audits
+                  <CheckCircle2 size={16} color="var(--consult-amber)" />{" "}
+                  Digital Transformation Audits
                 </li>
                 <li
-                  style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
                 >
                   <CheckCircle2 size={16} color="var(--consult-amber)" />{" "}
                   Strategic Business Growth
                 </li>
                 <li
-                  style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
                 >
                   <CheckCircle2 size={16} color="var(--consult-amber)" /> Risk &
                   IT Governance
@@ -380,7 +418,10 @@ export default function AboutSection({ onOpenContact }) {
 
           {/* Pillar 3: Real Estate & Property */}
           <ScrollReveal variant="fade-up" delay={300}>
-            <div className="glass-card-elevated" style={{ padding: "2.25rem", height: "100%" }}>
+            <div
+              className="glass-card-elevated"
+              style={{ padding: "2.25rem", height: "100%" }}
+            >
               <div
                 style={{
                   width: "48px",
@@ -443,19 +484,31 @@ export default function AboutSection({ onOpenContact }) {
                 }}
               >
                 <li
-                  style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
                 >
                   <CheckCircle2 size={16} color="var(--agri-emerald)" />{" "}
                   Commercial & Luxury Real Estate
                 </li>
                 <li
-                  style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
                 >
                   <CheckCircle2 size={16} color="var(--agri-emerald)" /> Smart
                   Building Infrastructure
                 </li>
                 <li
-                  style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
                 >
                   <CheckCircle2 size={16} color="var(--agri-emerald)" />{" "}
                   High-Yield Asset Investment

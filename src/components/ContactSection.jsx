@@ -72,7 +72,10 @@ export default function ContactSection() {
         </div>
       </ScrollReveal>
 
-      <div className="grid-2" style={{ gap: "3rem", alignItems: "start" }}>
+      <div
+        className="grid-2 "
+        style={{ gap: "3rem", alignItems: "start", padding: 20 }}
+      >
         {/* Contact Info Card */}
         <ScrollReveal variant="slide-left" delay={150}>
           <div className="glass-card-elevated" style={{ padding: "2.75rem" }}>

@@ -30,154 +30,81 @@ export default function Navbar({ onOpenContact }) {
 
   return (
     <header
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000,
-        transition: "all 0.3s ease",
-        background: mobileMenuOpen || isScrolled ? "#090514" : "transparent",
-        backdropFilter: mobileMenuOpen || isScrolled ? "blur(16px)" : "none",
-        WebkitBackdropFilter:
-          mobileMenuOpen || isScrolled ? "blur(16px)" : "none",
-        borderBottom:
-          mobileMenuOpen || isScrolled
-            ? "1px solid rgba(91, 26, 234, 0.3)"
-            : "1px solid transparent",
-        padding: isScrolled ? "0.65rem 0" : "1.1rem 0",
-      }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        mobileMenuOpen || isScrolled
+          ? "bg-[#090514] backdrop-blur-xl border-b border-[rgba(91,26,234,0.3)] py-3.5 min-[900px]:py-4"
+          : "bg-transparent backdrop-blur-none border-b border-transparent py-5 min-[900px]:py-6"
+      }`}
     >
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className="container flex items-center justify-between">
         {/* Brand Official Logo */}
-        <a
-          href="#"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "0.85rem",
-            textDecoration: "none",
-          }}
-        >
-          <div
-            style={{
-              padding: "0.2rem 0.5rem",
-              borderRadius: "12px",
-              background: "#ffffff",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: "0 0 20px rgba(91, 26, 234, 0.4)",
-              border: "1px solid rgba(91, 26, 234, 0.3)",
-            }}
-          >
+        <a href="#" className="flex items-center gap-3.5 no-underline">
+          <div className="px-2 py-2 flex items-center justify-center shadow-[0_0_20px_rgba(91,26,234,0.4)] border border-[rgba(91,26,234,0.3)] rounded-2xl">
             <img
               src="/images/logo.png"
               alt="Paceployt Ltd Logo"
-              style={{ height: "33px", objectFit: "contain" }}
+              className="h-8.25 object-contain rounded-2xl"
             />
           </div>
         </a>
 
         {/* Desktop Nav Items */}
-        <nav
-          style={{
-            display: "none",
-            mdDisplay: "flex",
-            alignItems: "center",
-            gap: "2.2rem",
-          }}
-          className="desktop-nav"
-        >
-          <a href="#about" style={navLinkStyle}>
+        <nav className="hidden min-[900px]:flex items-center gap-8 my-10">
+          <a
+            href="#about"
+            className="text-zinc-400 hover:text-white no-underline text-[0.925rem] font-semibold transition-colors duration-200"
+          >
             About Us
           </a>
 
           {/* Group Divisions Dropdown */}
           <div
-            style={{ position: "relative" }}
+            className="relative"
             onMouseEnter={() => setDivisionsDropdownOpen(true)}
             onMouseLeave={() => setDivisionsDropdownOpen(false)}
           >
-            <button
-              style={{
-                ...navLinkStyle,
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                gap: "0.35rem",
-              }}
-            >
+            <button className="text-zinc-400 hover:text-white bg-transparent border-0 cursor-pointer flex items-center gap-1.5 text-[0.925rem] font-semibold transition-colors duration-200">
               Group Divisions{" "}
               <ChevronDown
                 size={14}
-                style={{
-                  transition: "transform 0.2s ease",
-                  transform: divisionsDropdownOpen
-                    ? "rotate(180deg)"
-                    : "rotate(0)",
-                }}
+                className={`transition-transform duration-200 ${
+                  divisionsDropdownOpen ? "rotate-180" : "rotate-0"
+                }`}
               />
             </button>
 
             {divisionsDropdownOpen && (
-              <div
-                style={{
-                  position: "absolute",
-                  top: "100%",
-                  left: "-20px",
-                  width: "290px",
-                  background: "#0e081c",
-                  backdropFilter: "blur(20px)",
-                  border: "1px solid rgba(91, 26, 234, 0.3)",
-                  borderRadius: "20px",
-                  padding: "0.85rem",
-                  boxShadow: "0 25px 50px rgba(0,0,0,0.8)",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0.6rem",
-                }}
-              >
-                <a href="#divisions" style={dropdownItemStyle}>
-                  <div style={{ color: "#c084fc", fontWeight: 700 }}>
+              <div className="absolute top-full -left-5 w-72.5 bg-[#0e081c] backdrop-blur-xl border border-[rgba(91,26,234,0.3)] rounded-[20px] p-3.5 shadow-2xl flex flex-col gap-2.5 z-50">
+                <a
+                  href="#divisions"
+                  className="no-underline p-2.5 rounded-xl bg-white/3 hover:bg-white/10 flex flex-col transition-all duration-200"
+                >
+                  <div className="text-purple-400 font-bold">
                     💻 Paceployt Tech Agency
                   </div>
-                  <span
-                    style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}
-                  >
+                  <span className="text-xs text-zinc-400">
                     Software, Web & Mobile Builds
                   </span>
                 </a>
-                <a href="#divisions" style={dropdownItemStyle}>
-                  <div
-                    style={{ color: "var(--consult-amber)", fontWeight: 700 }}
-                  >
+                <a
+                  href="#divisions"
+                  className="no-underline p-2.5 rounded-xl bg-white/3 hover:bg-white/10 flex flex-col transition-all duration-200"
+                >
+                  <div className="text-amber-500 font-bold">
                     💼 Corporate Consulting
                   </div>
-                  <span
-                    style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}
-                  >
+                  <span className="text-xs text-zinc-400">
                     Strategy & Tech Advisory
                   </span>
                 </a>
-                <a href="#divisions" style={dropdownItemStyle}>
-                  <div
-                    style={{ color: "var(--agri-emerald)", fontWeight: 700 }}
-                  >
+                <a
+                  href="#divisions"
+                  className="no-underline p-2.5 rounded-xl bg-white/3 hover:bg-white/10 flex flex-col transition-all duration-200"
+                >
+                  <div className="text-emerald-500 font-bold">
                     🏢 Real Estate & Property
                   </div>
-                  <span
-                    style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}
-                  >
+                  <span className="text-xs text-zinc-400">
                     Commercial & Smart Property
                   </span>
                 </a>
@@ -185,48 +112,34 @@ export default function Navbar({ onOpenContact }) {
             )}
           </div>
 
-          <a href="#portfolio" style={navLinkStyle}>
+          <a
+            href="#portfolio"
+            className="text-zinc-400 hover:text-white no-underline text-[0.925rem] font-semibold transition-colors duration-200"
+          >
             Portfolio
           </a>
-          <a href="#solution-finder" style={navLinkStyle}>
+          <a
+            href="#solution-finder"
+            className="text-zinc-400 hover:text-white no-underline text-[0.925rem] font-semibold transition-colors duration-200"
+          >
             Solution Finder
           </a>
         </nav>
 
         {/* Desktop CTA Action Buttons */}
-        <div
-          style={{
-            display: "none",
-            mdDisplay: "flex",
-            alignItems: "center",
-            gap: "0.85rem",
-          }}
-          className="desktop-nav"
-        >
+        <div className="hidden min-[900px]:flex items-center gap-3.5">
           <a
             href="https://wa.me/2348148042760"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-whatsapp"
-            style={{
-              padding: "0.65rem 1.35rem",
-              fontSize: "0.875rem",
-              minWidth: "138px",
-              justifyContent: "center",
-            }}
+            className="btn-whatsapp px-5 py-2.5 text-sm min-w-34.5 justify-center"
           >
             <WhatsAppIcon size={18} /> WhatsApp
           </a>
 
           <button
             onClick={onOpenContact}
-            className="btn-primary"
-            style={{
-              padding: "0.65rem 1.35rem",
-              fontSize: "0.875rem",
-              minWidth: "138px",
-              justifyContent: "center",
-            }}
+            className="btn-primary px-5 py-2.5 text-sm min-w-34.5 justify-center"
           >
             Get Started <ArrowRight size={16} />
           </button>
@@ -235,14 +148,7 @@ export default function Navbar({ onOpenContact }) {
         {/* Mobile Menu Toggle Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          style={{
-            background: "none",
-            border: "none",
-            color: "#ffffff",
-            cursor: "pointer",
-            padding: "0.5rem",
-          }}
-          className="mobile-toggle"
+          className="min-[900px]:hidden bg-transparent border-0 text-white cursor-pointer p-2"
           aria-label="Toggle mobile navigation menu"
         >
           {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
@@ -251,197 +157,100 @@ export default function Navbar({ onOpenContact }) {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div
-          style={{
-            position: "fixed",
-            top: "100%",
-            left: 0,
-            right: 0,
-            height: "calc(100vh - 100%)",
-            background: "#090514",
-            borderTop: "1px solid rgba(91, 26, 234, 0.3)",
-            padding: "1.75rem 1.5rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1.1rem",
-            overflowY: "auto",
-            zIndex: 1000,
-          }}
-        >
+        <div className="fixed top-full left-0 right-0 h-[calc(100vh-100%)] bg-[#090514] border-t border-[rgba(91,26,234,0.3)] py-7 overflow-y-auto z-50">
           {/* About Us */}
-          <a
-            href="#about"
-            onClick={() => setMobileMenuOpen(false)}
-            style={mobileNavLinkStyle}
-          >
-            About Us
-          </a>
-
-          {/* Group Divisions Expandable Accordion */}
-          <div>
-            <button
-              onClick={() => setMobileDivisionsOpen(!mobileDivisionsOpen)}
-              style={{
-                ...mobileNavLinkStyle,
-                background: "none",
-                border: "none",
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                padding: 0,
-                cursor: "pointer",
-              }}
-            >
-              <span>Group Divisions</span>
-              <ChevronDown
-                size={18}
-                style={{
-                  transition: "transform 0.2s ease",
-                  transform: mobileDivisionsOpen
-                    ? "rotate(180deg)"
-                    : "rotate(0)",
-                }}
-              />
-            </button>
-
-            {mobileDivisionsOpen && (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0.65rem",
-                  marginTop: "0.75rem",
-                  paddingLeft: "1rem",
-                  borderLeft: "2px solid rgba(91, 26, 234, 0.4)",
-                }}
-              >
-                <a
-                  href="#divisions"
-                  onClick={() => setMobileMenuOpen(false)}
-                  style={{
-                    textDecoration: "none",
-                    color: "#c084fc",
-                    fontSize: "0.95rem",
-                    fontWeight: 700,
-                  }}
-                >
-                  💻 Paceployt Tech Agency
-                </a>
-                <a
-                  href="#divisions"
-                  onClick={() => setMobileMenuOpen(false)}
-                  style={{
-                    textDecoration: "none",
-                    color: "var(--consult-amber)",
-                    fontSize: "0.95rem",
-                    fontWeight: 700,
-                  }}
-                >
-                  💼 Corporate Consulting
-                </a>
-                <a
-                  href="#divisions"
-                  onClick={() => setMobileMenuOpen(false)}
-                  style={{
-                    textDecoration: "none",
-                    color: "var(--agri-emerald)",
-                    fontSize: "0.95rem",
-                    fontWeight: 700,
-                  }}
-                >
-                  🏢 Real Estate & Property
-                </a>
-              </div>
-            )}
-          </div>
-
-          {/* Portfolio */}
-          <a
-            href="#portfolio"
-            onClick={() => setMobileMenuOpen(false)}
-            style={mobileNavLinkStyle}
-          >
-            Portfolio
-          </a>
-
-          {/* Solution Finder */}
-          <a
-            href="#solution-finder"
-            onClick={() => setMobileMenuOpen(false)}
-            style={mobileNavLinkStyle}
-          >
-            Solution Finder
-          </a>
-
-          {/* Mobile CTA Buttons */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.75rem",
-              marginTop: "1.25rem",
-            }}
-          >
+          <div className="container flex flex-col gap-5 pt-4">
             <a
-              href="https://wa.me/2348148042760"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-whatsapp"
-              style={{ width: "100%", justifyContent: "center" }}
+              href="#about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-white no-underline text-lg font-bold"
             >
-              <WhatsAppIcon size={20} /> Chat on WhatsApp
+              About Us
             </a>
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenContact();
-              }}
-              className="btn-primary"
-              style={{ width: "100%", justifyContent: "center" }}
+
+            {/* Group Divisions Expandable Accordion */}
+            <div>
+              <button
+                onClick={() => setMobileDivisionsOpen(!mobileDivisionsOpen)}
+                className="text-white no-underline text-lg font-bold bg-transparent border-0 w-full flex items-center justify-between p-0 cursor-pointer"
+              >
+                <span>Group Divisions</span>
+                <ChevronDown
+                  size={18}
+                  className={`transition-transform duration-200 ${
+                    mobileDivisionsOpen ? "rotate-180" : "rotate-0"
+                  }`}
+                />
+              </button>
+
+              {mobileDivisionsOpen && (
+                <div className="flex flex-col gap-2.5 mt-3 pl-4 border-l-2 border-[rgba(91,26,234,0.4)]">
+                  <a
+                    href="#divisions"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="no-underline text-purple-400 text-[0.95rem] font-bold"
+                  >
+                    💻 Paceployt Tech Agency
+                  </a>
+                  <a
+                    href="#divisions"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="no-underline text-amber-500 text-[0.95rem] font-bold"
+                  >
+                    💼 Corporate Consulting
+                  </a>
+                  <a
+                    href="#divisions"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="no-underline text-emerald-500 text-[0.95rem] font-bold"
+                  >
+                    🏢 Real Estate & Property
+                  </a>
+                </div>
+              )}
+            </div>
+
+            {/* Portfolio */}
+            <a
+              href="#portfolio"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-white no-underline text-lg font-bold"
             >
-              Get Started <ArrowRight size={18} />
-            </button>
+              Portfolio
+            </a>
+
+            {/* Solution Finder */}
+            <a
+              href="#solution-finder"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-white no-underline text-lg font-bold"
+            >
+              Solution Finder
+            </a>
+
+            {/* Mobile CTA Buttons */}
+            <div className="flex flex-col gap-3 mt-5">
+              <a
+                href="https://wa.me/2348148042760"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-whatsapp w-full justify-center"
+              >
+                <WhatsAppIcon size={20} /> Chat on WhatsApp
+              </a>
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenContact();
+                }}
+                className="btn-primary w-full justify-center"
+              >
+                Get Started <ArrowRight size={18} />
+              </button>
+            </div>
           </div>
         </div>
       )}
-
-      {/* CSS helper for responsive display */}
-      <style>{`
-        @media (min-width: 900px) {
-          .desktop-nav { display: flex !important; }
-          .mobile-toggle { display: none !important; }
-        }
-        @media (max-width: 899px) {
-          .desktop-nav { display: none !important; }
-          .mobile-toggle { display: block !important; }
-        }
-      `}</style>
     </header>
   );
 }
-
-const navLinkStyle = {
-  color: "var(--text-muted)",
-  textDecoration: "none",
-  fontSize: "0.925rem",
-  fontWeight: 600,
-  transition: "color 0.2s ease",
-};
-
-const mobileNavLinkStyle = {
-  color: "#ffffff",
-  textDecoration: "none",
-  fontSize: "1.15rem",
-  fontWeight: 700,
-};
-
-const dropdownItemStyle = {
-  textDecoration: "none",
-  padding: "0.65rem 0.85rem",
-  borderRadius: "12px",
-  background: "rgba(255, 255, 255, 0.03)",
-  display: "flex",
-  flexDirection: "column",
-  transition: "all 0.2s ease",
-};

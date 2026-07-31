@@ -1,35 +1,37 @@
+@import "tailwindcss";
+
 :root {
   /* Paceployt Brand Colors from paceployt.vercel.app & Official Logo */
-  --purple-primary: #5B1AEA;
+  --purple-primary: #5b1aea;
   --purple-deep: #4c1d95;
   --purple-vibrant: #7c3aed;
   --purple-electric: #9333ea;
-  --purple-light: #E8DDFF;
+  --purple-light: #e8ddff;
   --purple-glow: rgba(91, 26, 234, 0.35);
-  
+
   --bg-dark: #090514;
   --bg-card: rgba(18, 11, 36, 0.75);
   --bg-card-hover: rgba(28, 17, 54, 0.85);
   --bg-glass: rgba(14, 8, 28, 0.82);
-  
+
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-glow: rgba(91, 26, 234, 0.4);
-  
+
   --consult-amber: #f59e0b;
   --agri-emerald: #10b981;
-  
+
   --text-main: #ffffff;
   --text-muted: #a1a1aa;
   --text-subtle: #71717a;
 
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
-  
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
   --radius-sm: 10px;
   --radius-md: 20px;
   --radius-lg: 32px;
   --radius-full: 9999px;
-  
+
   --shadow-glow: 0 0 35px rgba(91, 26, 234, 0.3);
   --shadow-card: 0 20px 45px -15px rgba(0, 0, 0, 0.7);
 }
@@ -79,14 +81,19 @@ body {
 }
 
 /* Typography Utilities */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--text-main);
   letter-spacing: -0.02em;
 }
 
 .gradient-text-purple {
-  background: linear-gradient(135deg, #a855f7 0%, #5B1AEA 50%, #c084fc 100%);
+  background: linear-gradient(135deg, #a855f7 0%, #5b1aea 50%, #c084fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -116,7 +123,11 @@ h1, h2, h3, h4, h5, h6 {
 /* ULTRA-PREMIUM HIGH-END CARDS DESIGN */
 .glass-card-elevated {
   position: relative;
-  background: linear-gradient(145deg, rgba(25, 14, 48, 0.8) 0%, rgba(14, 8, 28, 0.9) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(25, 14, 48, 0.8) 0%,
+    rgba(14, 8, 28, 0.9) 100%
+  );
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: 24px;
@@ -127,13 +138,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-card-elevated::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 24px;
   padding: 1.5px;
-  background: linear-gradient(135deg, rgba(91, 26, 234, 0.6) 0%, rgba(168, 85, 247, 0.15) 50%, rgba(255, 255, 255, 0.05) 100%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  background: linear-gradient(
+    135deg,
+    rgba(91, 26, 234, 0.6) 0%,
+    rgba(168, 85, 247, 0.15) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -142,7 +160,11 @@ h1, h2, h3, h4, h5, h6 {
 .glass-card-elevated:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: 0 25px 50px -12px rgba(91, 26, 234, 0.35);
-  background: linear-gradient(145deg, rgba(35, 19, 66, 0.9) 0%, rgba(18, 11, 36, 0.95) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(35, 19, 66, 0.9) 0%,
+    rgba(18, 11, 36, 0.95) 100%
+  );
 }
 
 /* Glow Background Spots */
@@ -151,7 +173,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(91, 26, 234, 0.22) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(91, 26, 234, 0.22) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
   pointer-events: none;
   z-index: 0;
 }
@@ -161,7 +187,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 450px;
   height: 450px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(147, 51, 234, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(147, 51, 234, 0.18) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
   pointer-events: none;
   z-index: 0;
 }
@@ -206,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.6rem;
   padding: 0.9rem 2rem;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, #5B1AEA 0%, #7c3aed 50%, #9333ea 100%);
+  background: linear-gradient(135deg, #5b1aea 0%, #7c3aed 50%, #9333ea 100%);
   color: #ffffff;
   font-weight: 700;
   font-size: 0.975rem;
@@ -287,12 +317,18 @@ h1, h2, h3, h4, h5, h6 {
 .modal-container {
   width: 100%;
   max-width: 580px;
-  background: linear-gradient(145deg, rgba(24, 13, 46, 0.95) 0%, rgba(12, 6, 26, 0.98) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(24, 13, 46, 0.95) 0%,
+    rgba(12, 6, 26, 0.98) 100%
+  );
   border-radius: 28px;
   padding: 2.5rem;
   position: relative;
   border: 1px solid rgba(147, 51, 234, 0.4);
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.9), 0 0 50px rgba(91, 26, 234, 0.3);
+  box-shadow:
+    0 30px 60px -12px rgba(0, 0, 0, 0.9),
+    0 0 50px rgba(91, 26, 234, 0.3);
 }
 
 .modal-input {
@@ -310,27 +346,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal-input:focus {
-  border-color: #5B1AEA;
+  border-color: #5b1aea;
   background: rgba(91, 26, 234, 0.08);
   box-shadow: 0 0 20px rgba(91, 26, 234, 0.35);
 }
 
 @keyframes fadeInModal {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Infinite Marquee Animation */
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee-container {
   display: flex;
   overflow: hidden;
   user-select: none;
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
 }
 
 .marquee-content {
@@ -371,13 +423,15 @@ h1, h2, h3, h4, h5, h6 {
   .section-padding {
     padding: 80px 0;
   }
-  
-  .grid-3, .grid-4 {
+
+  .grid-3,
+  .grid-4 {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 
-  .glow-spot-purple, .glow-spot-violet {
+  .glow-spot-purple,
+  .glow-spot-violet {
     width: 320px;
     height: 320px;
     opacity: 0.6;
@@ -389,11 +443,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 55px 0;
   }
 
-  .grid-2, .grid-3, .grid-4 {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
-  
+
   .container {
     padding: 0 1.25rem;
   }
@@ -424,7 +480,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.35rem 0.85rem;
   }
 
-  .btn-primary, .btn-secondary, .btn-whatsapp {
+  .btn-primary,
+  .btn-secondary,
+  .btn-whatsapp {
     padding: 0.8rem 1.6rem;
     font-size: 0.9rem;
   }
@@ -436,7 +494,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .container {
-    padding: 0 1rem;
+    padding: 0 1.25rem;
   }
 
   .glass-card-elevated {
@@ -451,8 +509,9 @@ h1, h2, h3, h4, h5, h6 {
 .reveal-init {
   opacity: 0;
   will-change: opacity, transform;
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-fade-up {
@@ -481,17 +540,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Stagger Delays for Cards & Items Sequences */
-.delay-75 { transition-delay: 75ms; }
-.delay-100 { transition-delay: 100ms; }
-.delay-150 { transition-delay: 150ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-250 { transition-delay: 250ms; }
-.delay-300 { transition-delay: 300ms; }
-.delay-350 { transition-delay: 350ms; }
-.delay-400 { transition-delay: 400ms; }
-.delay-450 { transition-delay: 450ms; }
-.delay-500 { transition-delay: 500ms; }
-.delay-600 { transition-delay: 600ms; }
+.delay-75 {
+  transition-delay: 75ms;
+}
+.delay-100 {
+  transition-delay: 100ms;
+}
+.delay-150 {
+  transition-delay: 150ms;
+}
+.delay-200 {
+  transition-delay: 200ms;
+}
+.delay-250 {
+  transition-delay: 250ms;
+}
+.delay-300 {
+  transition-delay: 300ms;
+}
+.delay-350 {
+  transition-delay: 350ms;
+}
+.delay-400 {
+  transition-delay: 400ms;
+}
+.delay-450 {
+  transition-delay: 450ms;
+}
+.delay-500 {
+  transition-delay: 500ms;
+}
+.delay-600 {
+  transition-delay: 600ms;
+}
 
 /* Reduced Motion Fallback */
 @media (prefers-reduced-motion: reduce) {
@@ -501,5 +582,3 @@ h1, h2, h3, h4, h5, h6 {
     transition: none !important;
   }
 }
-
-
