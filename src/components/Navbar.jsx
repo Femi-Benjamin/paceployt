@@ -18,18 +18,6 @@ export default function Navbar({ onOpenContact }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent background page scrolling when mobile drawer is open
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileMenuOpen]);
-
   return (
     <header
       className={`navbar ${mobileMenuOpen || isScrolled ? "navbar-scrolled" : "navbar-transparent"}`}
@@ -130,113 +118,113 @@ export default function Navbar({ onOpenContact }) {
           className="navbar-mobile-toggle"
           aria-label="Toggle mobile navigation menu"
         >
-          {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          {mobileMenuOpen ? <Menu size={26} /> : <X size={26} />}
         </button>
       </div>
 
       {/* Mobile Drawer Navigation */}
-      {mobileMenuOpen && (
-        <div className="navbar-mobile-drawer">
-          <div className="navbar-mobile-content">
-            {/* About Us */}
-            <Link
-              to="/about"
-              onClick={() => setMobileMenuOpen(false)}
-              className="navbar-mobile-link"
+      <div
+        className={`navbar-mobile-drawer ${mobileMenuOpen ? "open" : "closed"}`}
+      >
+        <div className="navbar-mobile-content">
+          {/* About Us */}
+          <Link
+            to="/about"
+            onClick={() => setMobileMenuOpen(false)}
+            className="navbar-mobile-link"
+          >
+            About Us
+          </Link>
+
+          {/* Our Team */}
+          <Link
+            to="/team"
+            onClick={() => setMobileMenuOpen(false)}
+            className="navbar-mobile-link"
+          >
+            Our Team
+          </Link>
+
+          {/* Group Divisions Expandable Accordion */}
+          <div>
+            <button
+              onClick={() => setMobileDivisionsOpen(!mobileDivisionsOpen)}
+              className="navbar-mobile-accordion-trigger"
             >
-              About Us
-            </Link>
+              <span>Group Divisions</span>
+              <ChevronDown
+                size={18}
+                className={`navbar-mobile-accordion-icon ${mobileDivisionsOpen ? "rotate-180" : "rotate-0"}`}
+              />
+            </button>
 
-            {/* Our Team */}
-            <Link
-              to="/team"
-              onClick={() => setMobileMenuOpen(false)}
-              className="navbar-mobile-link"
+            {mobileDivisionsOpen && (
+              <div className="navbar-mobile-accordion-content">
+                <Link
+                  to="/divisions"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="navbar-mobile-accordion-link-purple"
+                >
+                  💻 Paceployt Tech Agency
+                </Link>
+                <Link
+                  to="/divisions"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="navbar-mobile-accordion-link-amber"
+                >
+                  💼 Corporate Consulting
+                </Link>
+                <Link
+                  to="/divisions"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="navbar-mobile-accordion-link-emerald"
+                >
+                  🏢 Real Estate & Property
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Portfolio */}
+          <Link
+            to="/portfolio"
+            onClick={() => setMobileMenuOpen(false)}
+            className="navbar-mobile-link"
+          >
+            Portfolio
+          </Link>
+
+          {/* Solution Finder */}
+          <Link
+            to="/solution-finder"
+            onClick={() => setMobileMenuOpen(false)}
+            className="navbar-mobile-link"
+          >
+            Solution Finder
+          </Link>
+
+          {/* Mobile CTA Buttons */}
+          <div className="navbar-mobile-cta-wrapper">
+            <a
+              href="https://wa.me/2348148042760"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navbar-mobile-whatsapp-btn"
             >
-              Our Team
-            </Link>
-
-            {/* Group Divisions Expandable Accordion */}
-            <div>
-              <button
-                onClick={() => setMobileDivisionsOpen(!mobileDivisionsOpen)}
-                className="navbar-mobile-accordion-trigger"
-              >
-                <span>Group Divisions</span>
-                <ChevronDown
-                  size={18}
-                  className={`navbar-mobile-accordion-icon ${mobileDivisionsOpen ? "rotate-180" : "rotate-0"}`}
-                />
-              </button>
-
-              {mobileDivisionsOpen && (
-                <div className="navbar-mobile-accordion-content">
-                  <Link
-                    to="/divisions"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="navbar-mobile-accordion-link-purple"
-                  >
-                    💻 Paceployt Tech Agency
-                  </Link>
-                  <Link
-                    to="/divisions"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="navbar-mobile-accordion-link-amber"
-                  >
-                    💼 Corporate Consulting
-                  </Link>
-                  <Link
-                    to="/divisions"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="navbar-mobile-accordion-link-emerald"
-                  >
-                    🏢 Real Estate & Property
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            {/* Portfolio */}
-            <Link
-              to="/portfolio"
-              onClick={() => setMobileMenuOpen(false)}
-              className="navbar-mobile-link"
+              <WhatsAppIcon size={20} /> Chat on WhatsApp
+            </a>
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onOpenContact();
+              }}
+              className="navbar-mobile-primary-btn"
             >
-              Portfolio
-            </Link>
-
-            {/* Solution Finder */}
-            <Link
-              to="/solution-finder"
-              onClick={() => setMobileMenuOpen(false)}
-              className="navbar-mobile-link"
-            >
-              Solution Finder
-            </Link>
-
-            {/* Mobile CTA Buttons */}
-            <div className="navbar-mobile-cta-wrapper">
-              <a
-                href="https://wa.me/2348148042760"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="navbar-mobile-whatsapp-btn"
-              >
-                <WhatsAppIcon size={20} /> Chat on WhatsApp
-              </a>
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenContact();
-                }}
-                className="navbar-mobile-primary-btn"
-              >
-                Get Started <ArrowRight size={18} />
-              </button>
-            </div>
+              Get Started <ArrowRight size={18} />
+            </button>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }

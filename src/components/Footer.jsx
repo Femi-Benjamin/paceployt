@@ -34,9 +34,9 @@ export default function Footer({ onOpenContact }) {
                   src="/images/logo.png"
                   alt="Paceployt Ltd Logo"
                   style={{
-                    height: "36px",
+                    height: "33px",
                     objectFit: "contain",
-                    borderRadius: "12px",
+                    borderRadius: "15px",
                   }}
                 />
               </div>
