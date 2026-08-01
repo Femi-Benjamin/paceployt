@@ -321,11 +321,11 @@ h6 {
   }
 }
 
-.navbar-transparent {
+/* .navbar-transparent {
   background: transparent;
   backdrop-filter: none;
   border-bottom: 1px solid transparent;
-}
+} */
 
 .navbar-scrolled {
   /* background: rgba(9, 5, 20, 0.95); */
