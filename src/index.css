@@ -312,7 +312,7 @@ h6 {
   z-index: 1000;
   transition: all 0.3s ease;
   width: 100%;
-  height: 72px; /* FIXED HEIGHT on mobile */
+  height: 72px; /* FIXED HEIGHT */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -323,6 +323,62 @@ h6 {
   }
 }
 
+/* Mobile Drawer - FIXED */
+.navbar-mobile-drawer {
+  position: fixed;
+  top: 72px; /* MATCHES NAVBAR HEIGHT */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(9, 5, 20, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 999;
+  overflow-y: auto;
+  padding: 0;
+  display: none; /* Hidden by default */
+}
+
+/* When open, show the drawer */
+.navbar-mobile-drawer.open {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+/* When closed, hide it */
+.navbar-mobile-drawer.closed {
+  display: none;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* For desktop, always hide the mobile drawer */
+@media (min-width: 900px) {
+  .navbar-mobile-drawer {
+    display: none !important;
+  }
+}
+
+/* Mobile content styles */
+.navbar-mobile-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 24px 48px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+  overflow-y: auto;
+}
 /* .navbar-transparent {
   background: transparent;
   backdrop-filter: none;
@@ -589,6 +645,7 @@ h6 {
 }
 
 /* Mobile Drawer - FIXED POSITION */
+/* Mobile Drawer - FIXED VISIBILITY */
 .navbar-mobile-drawer {
   position: fixed;
   top: 72px; /* MATCHES NAVBAR HEIGHT */
@@ -601,12 +658,32 @@ h6 {
   animation: slideDown 0.3s ease-out;
 }
 
-@media (min-width: 900px) {
+/* Ensure the drawer is hidden when closed */
+.navbar-mobile-drawer.closed {
+  display: none;
+}
+
+/* Ensure the drawer is visible when open */
+.navbar-mobile-drawer.open {
+  display: block;
+}
+
+/* For browsers that don't support display: none with animation */
+@media (max-width: 899px) {
   .navbar-mobile-drawer {
     display: none;
   }
+
+  .navbar-mobile-drawer.open {
+    display: block;
+  }
 }
 
+@media (min-width: 900px) {
+  .navbar-mobile-drawer {
+    display: none !important;
+  }
+}
 @keyframes slideDown {
   from {
     opacity: 0;
