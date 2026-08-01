@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 import "../index.css";
@@ -35,7 +36,7 @@ export default function Navbar({ onOpenContact }) {
     >
       <div className="navbar-container">
         {/* Brand Official Logo */}
-        <a href="#" className="navbar-brand">
+        <Link to="/" className="navbar-brand">
           <div className="navbar-logo-wrapper">
             <img
               src="/images/logo.png"
@@ -43,17 +44,17 @@ export default function Navbar({ onOpenContact }) {
               className="navbar-logo-img"
             />
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Nav Items */}
         <nav className="navbar-desktop-nav">
-          <a href="#about" className="navbar-link">
+          <Link to="/about" className="navbar-link">
             About Us
-          </a>
+          </Link>
 
-          <a href="#team" className="navbar-link">
+          <Link to="/team" className="navbar-link">
             Our Team
-          </a>
+          </Link>
 
           {/* Group Divisions Dropdown */}
           <div
@@ -71,40 +72,40 @@ export default function Navbar({ onOpenContact }) {
 
             {divisionsDropdownOpen && (
               <div className="navbar-dropdown-menu">
-                <a href="#divisions" className="navbar-dropdown-item">
+                <Link to="/divisions" className="navbar-dropdown-item">
                   <div className="navbar-dropdown-item-title-purple">
                     💻 Paceployt Tech Agency
                   </div>
                   <span className="navbar-dropdown-item-subtitle">
                     Software, Web & Mobile Builds
                   </span>
-                </a>
-                <a href="#divisions" className="navbar-dropdown-item">
+                </Link>
+                <Link to="/divisions" className="navbar-dropdown-item">
                   <div className="navbar-dropdown-item-title-amber">
                     💼 Corporate Consulting
                   </div>
                   <span className="navbar-dropdown-item-subtitle">
                     Strategy & Tech Advisory
                   </span>
-                </a>
-                <a href="#divisions" className="navbar-dropdown-item">
+                </Link>
+                <Link to="/divisions" className="navbar-dropdown-item">
                   <div className="navbar-dropdown-item-title-emerald">
                     🏢 Real Estate & Property
                   </div>
                   <span className="navbar-dropdown-item-subtitle">
                     Commercial & Smart Property
                   </span>
-                </a>
+                </Link>
               </div>
             )}
           </div>
 
-          <a href="#portfolio" className="navbar-link">
+          <Link to="/portfolio" className="navbar-link">
             Portfolio
-          </a>
-          <a href="#solution-finder" className="navbar-link">
+          </Link>
+          <Link to="/solution-finder" className="navbar-link">
             Solution Finder
-          </a>
+          </Link>
         </nav>
 
         {/* Desktop CTA Action Buttons */}
@@ -138,22 +139,22 @@ export default function Navbar({ onOpenContact }) {
         <div className="navbar-mobile-drawer">
           <div className="navbar-mobile-content">
             {/* About Us */}
-            <a
-              href="#about"
+            <Link
+              to="/about"
               onClick={() => setMobileMenuOpen(false)}
               className="navbar-mobile-link"
             >
               About Us
-            </a>
+            </Link>
 
             {/* Our Team */}
-            <a
-              href="#team"
+            <Link
+              to="/team"
               onClick={() => setMobileMenuOpen(false)}
               className="navbar-mobile-link"
             >
               Our Team
-            </a>
+            </Link>
 
             {/* Group Divisions Expandable Accordion */}
             <div>
@@ -170,48 +171,48 @@ export default function Navbar({ onOpenContact }) {
 
               {mobileDivisionsOpen && (
                 <div className="navbar-mobile-accordion-content">
-                  <a
-                    href="#divisions"
+                  <Link
+                    to="/divisions"
                     onClick={() => setMobileMenuOpen(false)}
                     className="navbar-mobile-accordion-link-purple"
                   >
                     💻 Paceployt Tech Agency
-                  </a>
-                  <a
-                    href="#divisions"
+                  </Link>
+                  <Link
+                    to="/divisions"
                     onClick={() => setMobileMenuOpen(false)}
                     className="navbar-mobile-accordion-link-amber"
                   >
                     💼 Corporate Consulting
-                  </a>
-                  <a
-                    href="#divisions"
+                  </Link>
+                  <Link
+                    to="/divisions"
                     onClick={() => setMobileMenuOpen(false)}
                     className="navbar-mobile-accordion-link-emerald"
                   >
                     🏢 Real Estate & Property
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
 
             {/* Portfolio */}
-            <a
-              href="#portfolio"
+            <Link
+              to="/portfolio"
               onClick={() => setMobileMenuOpen(false)}
               className="navbar-mobile-link"
             >
               Portfolio
-            </a>
+            </Link>
 
             {/* Solution Finder */}
-            <a
-              href="#solution-finder"
+            <Link
+              to="/solution-finder"
               onClick={() => setMobileMenuOpen(false)}
               className="navbar-mobile-link"
             >
               Solution Finder
-            </a>
+            </Link>
 
             {/* Mobile CTA Buttons */}
             <div className="navbar-mobile-cta-wrapper">

@@ -27,7 +27,7 @@ export default function TechSpotlight({ onOpenContact }) {
   ];
 
   return (
-    <section className="section-padding" style={{ background: 'rgba(9, 5, 20, 0.9)', position: 'relative' }}>
+    <section id="tech" className="section-padding" style={{ background: 'rgba(9, 5, 20, 0.9)', position: 'relative' }}>
       <div className="container">
         <ScrollReveal variant="scale-up" delay={100}>
           <div className="glass-card-elevated">

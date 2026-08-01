@@ -4,7 +4,7 @@ import { ExternalLink, ShieldCheck, Zap, TrendingUp, Lock, Wallet, ArrowRight } 
 
 export default function PaveSpotlight({ onOpenContact }) {
   return (
-    <section id="pave-spotlight" className="section-padding" style={{ position: 'relative' }}>
+    <section id="pave" className="section-padding" style={{ position: 'relative' }}>
       <div className="glow-spot-purple" style={{ top: '10%', right: '5%' }}></div>
       <div className="glow-spot-violet" style={{ bottom: '10%', left: '5%' }}></div>
 

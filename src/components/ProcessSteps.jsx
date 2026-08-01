@@ -49,7 +49,7 @@ export default function ProcessSteps({ onOpenContact }) {
   ];
 
   return (
-    <section id="process-steps" className="section-padding" style={{ background: 'rgba(7, 4, 18, 0.95)', position: 'relative', borderTop: '1px solid rgba(91, 26, 234, 0.2)' }}>
+    <section id="process" className="section-padding" style={{ background: 'rgba(7, 4, 18, 0.95)', position: 'relative', borderTop: '1px solid rgba(91, 26, 234, 0.2)' }}>
       <div className="glow-spot-purple" style={{ top: '10%', right: '20%' }}></div>
 
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>

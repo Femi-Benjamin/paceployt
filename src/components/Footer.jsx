@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import { Mail, ArrowUpRight } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
@@ -151,24 +152,24 @@ export default function Footer({ onOpenContact }) {
                 }}
               >
                 <li>
-                  <a href="#about" style={footerLinkStyle}>
+                  <Link to="/about" style={footerLinkStyle}>
                     About Paceployt
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#divisions" style={footerLinkStyle}>
+                  <Link to="/divisions" style={footerLinkStyle}>
                     Enterprise Divisions
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#portfolio" style={footerLinkStyle}>
+                  <Link to="/portfolio" style={footerLinkStyle}>
                     Case Studies & Portfolio
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#solution-finder" style={footerLinkStyle}>
+                  <Link to="/solution-finder" style={footerLinkStyle}>
                     Solution Finder
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -340,18 +341,18 @@ export default function Footer({ onOpenContact }) {
           </div>
 
           <div style={{ display: "flex", gap: "1.5rem" }}>
-            <a
-              href="#"
+            <Link
+              to="/privacy"
               style={{ color: "var(--text-subtle)", textDecoration: "none" }}
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/terms"
               style={{ color: "var(--text-subtle)", textDecoration: "none" }}
             >
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import {
   ArrowRight,
@@ -151,13 +152,13 @@ export default function Hero({ onOpenContact }) {
               Get Started with Paceployt <ArrowRight size={20} />
             </button>
 
-            <a
-              href="#about"
+            <Link
+              to="/about"
               className="btn-secondary"
               style={{ padding: "1rem 2.4rem", fontSize: "1.05rem" }}
             >
               Discover What We Do
-            </a>
+            </Link>
           </div>
         </ScrollReveal>
 
@@ -304,8 +305,8 @@ export default function Hero({ onOpenContact }) {
                   Verified Metric
                 </span>
               </div>
-              <a
-                href="#divisions"
+              <Link
+                to="/divisions"
                 style={{
                   width: "42px",
                   height: "42px",
@@ -319,7 +320,7 @@ export default function Hero({ onOpenContact }) {
                 }}
               >
                 <ChevronRight size={22} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
