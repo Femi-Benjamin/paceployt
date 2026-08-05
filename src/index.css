@@ -304,19 +304,7 @@ h6 {
    ========================================================================== */
 
 /* Navbar Container */
-/* .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: all 0.3s ease;
-  width: 100%;
-  height: 72px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(20px);
-} */
- /* Update your navbar styles */
+/* Updated navbar styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -342,21 +330,7 @@ h6 {
 }
 
 /* Mobile Drawer - FIXED */
-/* .navbar-mobile-drawer {
-  position: fixed;
-  top: 72px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(9, 5, 20, 0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  z-index: 999;
-  overflow-y: auto;
-  padding: 0;
-  display: none;
-} */
- /* Mobile drawer blur */
+/* Mobile drawer blur */
 .navbar-mobile-drawer {
   position: fixed;
   top: 72px;
@@ -413,12 +387,8 @@ h6 {
   height: 100%;
   overflow-y: auto;
 }
-/* .navbar-transparent {
-  background: transparent;
-  backdrop-filter: none;
-  border-bottom: 1px solid transparent;
-} */
- /* Transparent state (no blur) */
+
+/* Transparent state (no blur) */
 .navbar-transparent {
   background: transparent;
   backdrop-filter: none;
@@ -427,13 +397,6 @@ h6 {
   -o-backdrop-filter: none;
 }
 
-/* .navbar-scrolled { */
-  /* background: rgba(9, 5, 20, 0.95); */
-  /* backdrop-filter: blur(10px); */
-  /* -webkit-backdrop-filter: blur(20px); */
-  /* border-bottom: 1px solid rgba(91, 26, 234, 0.3); */
-  /* box-shadow: 0 10px 15px -3px rgba(74, 13, 104, 0.2); */
-/* }
 /* Scrolled state */
 .navbar-scrolled {
   background: rgba(9, 5, 20, 0.92);

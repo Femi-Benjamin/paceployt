@@ -147,7 +147,9 @@ export default function DivisionsSection({ onOpenContact }) {
                   }}
                 >
                   <div
-                    style={{ color: isActive ? div.color : "var(--text-muted)" }}
+                    style={{
+                      color: isActive ? div.color : "var(--text-muted)",
+                    }}
                   >
                     <TabIcon size={20} />
                   </div>
@@ -178,123 +180,127 @@ export default function DivisionsSection({ onOpenContact }) {
               boxShadow: `0 25px 60px ${current.color}20`,
             }}
           >
-          <div
-            className="grid-2"
-            style={{ gap: "3.5rem", alignItems: "center" }}
-          >
-            {/* Left Content Column */}
-            <div>
-              <div
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  padding: "0.35rem 0.85rem",
-                  borderRadius: "9999px",
-                  background: current.badgeBg,
-                  color: current.color,
-                  fontWeight: 800,
-                  fontSize: "0.775rem",
-                  marginBottom: "1rem",
-                }}
-              >
-                <CurrentIcon size={16} /> {current.tagline}
-              </div>
-
-              <h3
-                style={{
-                  fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-                  fontWeight: 800,
-                  marginBottom: "1rem",
-                  color: "#ffffff",
-                }}
-              >
-                {current.name}
-              </h3>
-
-              <p
-                style={{
-                  color: "var(--text-muted)",
-                  fontSize: "1.05rem",
-                  lineHeight: 1.7,
-                  marginBottom: "2rem",
-                }}
-              >
-                {current.description}
-              </p>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0.85rem",
-                  marginBottom: "2.5rem",
-                }}
-              >
-                {current.highlights.map((h, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "0.75rem",
-                    }}
-                  >
-                    <div style={{ color: current.color, flexShrink: 0 }}>
-                      <CheckCircle2 size={20} />
-                    </div>
-                    <span
-                      style={{
-                        color: "#ffffff",
-                        fontWeight: 600,
-                        fontSize: "0.975rem",
-                      }}
-                    >
-                      {h}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <button
-                onClick={onOpenContact}
-                className="btn-primary"
-                style={{ padding: "0.95rem 2.2rem", fontSize: "1rem" }}
-              >
-                Consult With {current.name} <ArrowRight size={18} />
-              </button>
-            </div>
-
-            {/* Right Visual Image */}
-            <div>
-              <div
-                style={{
-                  borderRadius: "24px",
-                  overflow: "hidden",
-                  border: `1px solid ${current.color}50`,
-                  boxShadow: "0 20px 45px rgba(0,0,0,0.8)",
-                  height: "380px",
-                  position: "relative",
-                }}
-              >
-                <img
-                  src={current.image}
-                  alt={current.name}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
+            <div
+              className="grid-2"
+              style={{ gap: "3.5rem", alignItems: "center" }}
+            >
+              {/* Left Content Column */}
+              <div>
                 <div
                   style={{
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                      "linear-gradient(to top, rgba(9, 5, 20, 0.85) 0%, transparent 60%)",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    padding: "0.35rem 0.85rem",
+                    borderRadius: "9999px",
+                    background: current.badgeBg,
+                    color: current.color,
+                    fontWeight: 800,
+                    fontSize: "0.775rem",
+                    marginBottom: "1rem",
                   }}
-                ></div>
+                >
+                  <CurrentIcon size={16} /> {current.tagline}
+                </div>
+
+                <h3
+                  style={{
+                    fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
+                    fontWeight: 800,
+                    marginBottom: "1rem",
+                    color: "#ffffff",
+                  }}
+                >
+                  {current.name}
+                </h3>
+
+                <p
+                  style={{
+                    color: "var(--text-muted)",
+                    fontSize: "1.05rem",
+                    lineHeight: 1.7,
+                    marginBottom: "2rem",
+                  }}
+                >
+                  {current.description}
+                </p>
+
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.85rem",
+                    marginBottom: "2.5rem",
+                  }}
+                >
+                  {current.highlights.map((h, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.75rem",
+                      }}
+                    >
+                      <div style={{ color: current.color, flexShrink: 0 }}>
+                        <CheckCircle2 size={20} />
+                      </div>
+                      <span
+                        style={{
+                          color: "#ffffff",
+                          fontWeight: 600,
+                          fontSize: "0.975rem",
+                        }}
+                      >
+                        {h}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <button
+                  onClick={onOpenContact}
+                  className="btn-primary"
+                  style={{ padding: "0.95rem 2.2rem", fontSize: "1rem" }}
+                >
+                  Consult With {current.name} <ArrowRight size={18} />
+                </button>
+              </div>
+
+              {/* Right Visual Image */}
+              <div>
+                <div
+                  style={{
+                    borderRadius: "24px",
+                    overflow: "hidden",
+                    border: `1px solid ${current.color}50`,
+                    boxShadow: "0 20px 45px rgba(0,0,0,0.8)",
+                    height: "380px",
+                    position: "relative",
+                  }}
+                >
+                  <img
+                    src={current.image}
+                    alt={current.name}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background:
+                        "linear-gradient(to top, rgba(9, 5, 20, 0.85) 0%, transparent 60%)",
+                    }}
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ScrollReveal>
+        </ScrollReveal>
       </div>
     </section>
   );

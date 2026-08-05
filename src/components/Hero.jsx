@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import {
   ArrowRight,
-
   Sparkles,
   Code2,
   Cpu,
@@ -92,7 +91,9 @@ export default function Hero({ onOpenContact }) {
         {/* Parent Group Badge */}
 
         {/* Hero Headline */}
-        <div style={{ textAlign: "center", maxWidth: "950px", margin: "0 auto" }}>
+        <div
+          style={{ textAlign: "center", maxWidth: "950px", margin: "0 auto" }}
+        >
           <ScrollReveal variant="fade-up" delay={50}>
             <h1
               style={{
@@ -120,10 +121,10 @@ export default function Hero({ onOpenContact }) {
                 lineHeight: 1.6,
               }}
             >
-              <strong style={{ color: "#ffffff" }}>Paceployt</strong> operates as
-              a parent conglomerate shaping the future of global industries. While
-              we drive impact in corporate consulting and premier real estate, our
-              strength is in{" "}
+              <strong style={{ color: "#ffffff" }}>Paceployt</strong> operates
+              as a parent conglomerate shaping the future of global industries.
+              While we drive impact in corporate consulting and premier real
+              estate, our strength is in{" "}
               <span style={{ color: "#c084fc", fontWeight: 700 }}>
                 cutting-edge technology & digital engineering
               </span>
@@ -173,158 +174,158 @@ export default function Hero({ onOpenContact }) {
               position: "relative",
             }}
           >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginBottom: "1.25rem",
-              flexWrap: "wrap",
-              gap: "1rem",
-            }}
-          >
-            <span
+            <div
               style={{
-                fontSize: "0.825rem",
-                fontWeight: 800,
-                letterSpacing: "0.12em",
-                color: "var(--text-muted)",
-                textTransform: "uppercase",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                marginBottom: "1.25rem",
+                flexWrap: "wrap",
+                gap: "1rem",
               }}
             >
-              Paceployt Core Pillars:
-            </span>
-
-            <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap" }}>
-              <button
-                onClick={() => setActiveSector("tech")}
-                className={`badge-pill ${activeSector === "tech" ? "badge-purple" : "btn-secondary"}`}
+              <span
                 style={{
-                  cursor: "pointer",
-                  padding: "0.45rem 1rem",
-                  fontSize: "0.8rem",
-                }}
-              >
-                <Code2 size={14} /> Paceployt Tech Agency
-              </button>
-
-              <button
-                onClick={() => setActiveSector("consulting")}
-                className={`badge-pill ${activeSector === "consulting" ? "badge-consulting" : "btn-secondary"}`}
-                style={{
-                  cursor: "pointer",
-                  padding: "0.45rem 1rem",
-                  fontSize: "0.8rem",
-                }}
-              >
-                <Briefcase size={14} /> Corporate Consulting
-              </button>
-
-              <button
-                onClick={() => setActiveSector("real_estate")}
-                className={`badge-pill ${activeSector === "real_estate" ? "badge-agri" : "btn-secondary"}`}
-                style={{
-                  cursor: "pointer",
-                  padding: "0.45rem 1rem",
-                  fontSize: "0.8rem",
-                }}
-              >
-                <Building2 size={14} /> Real Estate & Property
-              </button>
-            </div>
-          </div>
-
-          {/* Active Sector Card */}
-          <div
-            style={{
-              background: "rgba(255, 255, 255, 0.03)",
-              borderRadius: "16px",
-              padding: "1.35rem 1.6rem",
-              border: `1px solid ${sectorHighlights[activeSector].color}40`,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              flexWrap: "wrap",
-              gap: "1rem",
-              transition: "all 0.3s ease",
-            }}
-          >
-            <div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.75rem",
-                  marginBottom: "0.4rem",
-                }}
-              >
-                <span
-                  style={{
-                    fontSize: "0.7rem",
-                    fontWeight: 800,
-                    padding: "0.2rem 0.6rem",
-                    borderRadius: "6px",
-                    backgroundColor: sectorHighlights[activeSector].color,
-                    color: "#090514",
-                  }}
-                >
-                  {sectorHighlights[activeSector].tag}
-                </span>
-                <h3 style={{ fontSize: "1.3rem", fontWeight: 800 }}>
-                  {sectorHighlights[activeSector].title}
-                </h3>
-              </div>
-              <p
-                style={{
+                  fontSize: "0.825rem",
+                  fontWeight: 800,
+                  letterSpacing: "0.12em",
                   color: "var(--text-muted)",
-                  fontSize: "0.95rem",
-                  maxWidth: "750px",
+                  textTransform: "uppercase",
                 }}
               >
-                {sectorHighlights[activeSector].description}
-              </p>
-            </div>
+                Paceployt Core Pillars:
+              </span>
 
-            <div
-              style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}
-            >
-              <div style={{ textAlign: "right" }}>
-                <span
+              <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap" }}>
+                <button
+                  onClick={() => setActiveSector("tech")}
+                  className={`badge-pill ${activeSector === "tech" ? "badge-purple" : "btn-secondary"}`}
                   style={{
-                    display: "block",
-                    fontSize: "1.15rem",
-                    fontWeight: 800,
-                    color: sectorHighlights[activeSector].color,
+                    cursor: "pointer",
+                    padding: "0.45rem 1rem",
+                    fontSize: "0.8rem",
                   }}
                 >
-                  {sectorHighlights[activeSector].stats}
-                </span>
-                <span
-                  style={{ fontSize: "0.75rem", color: "var(--text-subtle)" }}
+                  <Code2 size={14} /> Paceployt Tech Agency
+                </button>
+
+                <button
+                  onClick={() => setActiveSector("consulting")}
+                  className={`badge-pill ${activeSector === "consulting" ? "badge-consulting" : "btn-secondary"}`}
+                  style={{
+                    cursor: "pointer",
+                    padding: "0.45rem 1rem",
+                    fontSize: "0.8rem",
+                  }}
                 >
-                  Verified Metric
-                </span>
+                  <Briefcase size={14} /> Corporate Consulting
+                </button>
+
+                <button
+                  onClick={() => setActiveSector("real_estate")}
+                  className={`badge-pill ${activeSector === "real_estate" ? "badge-agri" : "btn-secondary"}`}
+                  style={{
+                    cursor: "pointer",
+                    padding: "0.45rem 1rem",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  <Building2 size={14} /> Real Estate & Property
+                </button>
               </div>
-              <Link
-                to="/divisions"
-                style={{
-                  width: "42px",
-                  height: "42px",
-                  borderRadius: "50%",
-                  background: "rgba(255, 255, 255, 0.08)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "#ffffff",
-                  textDecoration: "none",
-                }}
+            </div>
+
+            {/* Active Sector Card */}
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.03)",
+                borderRadius: "16px",
+                padding: "1.35rem 1.6rem",
+                border: `1px solid ${sectorHighlights[activeSector].color}40`,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexWrap: "wrap",
+                gap: "1rem",
+                transition: "all 0.3s ease",
+              }}
+            >
+              <div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.75rem",
+                    marginBottom: "0.4rem",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: "0.7rem",
+                      fontWeight: 800,
+                      padding: "0.2rem 0.6rem",
+                      borderRadius: "6px",
+                      backgroundColor: sectorHighlights[activeSector].color,
+                      color: "#090514",
+                    }}
+                  >
+                    {sectorHighlights[activeSector].tag}
+                  </span>
+                  <h3 style={{ fontSize: "1.3rem", fontWeight: 800 }}>
+                    {sectorHighlights[activeSector].title}
+                  </h3>
+                </div>
+                <p
+                  style={{
+                    color: "var(--text-muted)",
+                    fontSize: "0.95rem",
+                    maxWidth: "750px",
+                  }}
+                >
+                  {sectorHighlights[activeSector].description}
+                </p>
+              </div>
+
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}
               >
-                <ChevronRight size={22} />
-              </Link>
+                <div style={{ textAlign: "right" }}>
+                  <span
+                    style={{
+                      display: "block",
+                      fontSize: "1.15rem",
+                      fontWeight: 800,
+                      color: sectorHighlights[activeSector].color,
+                    }}
+                  >
+                    {sectorHighlights[activeSector].stats}
+                  </span>
+                  <span
+                    style={{ fontSize: "0.75rem", color: "var(--text-subtle)" }}
+                  >
+                    Verified Metric
+                  </span>
+                </div>
+                <Link
+                  to="/divisions"
+                  style={{
+                    width: "42px",
+                    height: "42px",
+                    borderRadius: "50%",
+                    background: "rgba(255, 255, 255, 0.08)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "#ffffff",
+                    textDecoration: "none",
+                  }}
+                >
+                  <ChevronRight size={22} />
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </ScrollReveal>
+        </ScrollReveal>
 
         {/* Global Key Stats Bar */}
         <div
