@@ -200,7 +200,7 @@ export default function TeamSection({ onOpenContact }) {
       id: 2,
       name: "Benjamin",
       role: "Lead Frontend Architect",
-      division: "Frontend Engineering",
+      division: "Frontend Engineer",
       divisionColor: "purple",
       RoleIcon: Crown,
       bio: "Built Paceployt on a core conviction: engineering, capital strategy, and hands-on advisory deliver the most value when combined under one roof. Sets the direction across every venture the studio takes on.",
