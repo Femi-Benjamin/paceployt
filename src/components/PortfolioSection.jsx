@@ -40,7 +40,7 @@ export default function PortfolioSection({ onOpenContact }) {
       id: 4,
       title: "Smart Real Estate & Commercial Property Hub",
       category: "real_estate",
-      categoryLabel: "Paceployt Real Estate",
+      categoryLabel: "Paceployt Real Estate — Coming Soon",
       tech: "Smart Architecture, Asset Development",
       desc: "Modern commercial real estate acquisition, smart building management, and high-yield property investment development.",
       image: "/images/real_estate.jpg",
@@ -117,7 +117,7 @@ export default function PortfolioSection({ onOpenContact }) {
                   fontSize: "0.85rem",
                 }}
               >
-                {f.label}
+                {f.label} {f.id === "real_estate" && <span className="coming-soon-badge">Coming Soon</span>}
               </button>
             ))}
           </div>

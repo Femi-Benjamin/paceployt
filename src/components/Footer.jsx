@@ -223,7 +223,7 @@ export default function Footer({ onOpenContact }) {
                     fontWeight: 700,
                   }}
                 >
-                  🏢 Real Estate & Property
+                  🏢 Real Estate & Property <span className="coming-soon-badge">Coming Soon</span>
                 </li>
               </ul>
             </div>
@@ -337,7 +337,7 @@ export default function Footer({ onOpenContact }) {
         >
           <div>
             © {currentYear} Paceployt Ltd. All Rights Reserved. Building
-            innovative solutions across Tech, Consulting & Real Estate.
+            innovative solutions across Tech, Consulting & Real Estate (Coming Soon).
           </div>
 
           <div style={{ display: "flex", gap: "1.5rem" }}>

@@ -66,7 +66,7 @@ export default function ContactSection() {
           </h2>
           <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
             Whether you want to build a digital product, consult on business
-            strategy, or invest in real estate, we are ready to bring your ideas
+            strategy, or invest in real estate (coming soon), we are ready to bring your ideas
             to life.
           </p>
         </div>
@@ -410,7 +410,7 @@ export default function ContactSection() {
                       Corporate & Tech Advisory Consulting
                     </option>
                     <option value="real_estate">
-                      Real Estate & Smart Property Development
+                      Real Estate & Smart Property Development (Coming Soon)
                     </option>
                   </select>
                 </div>

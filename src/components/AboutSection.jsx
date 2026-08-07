@@ -447,7 +447,7 @@ export default function AboutSection({ onOpenContact }) {
                   marginBottom: "0.4rem",
                 }}
               >
-                Prime Property Sector
+                Prime Property Sector — Coming Soon
               </div>
               <h3
                 style={{
@@ -457,7 +457,7 @@ export default function AboutSection({ onOpenContact }) {
                   marginBottom: "0.75rem",
                 }}
               >
-                Real Estate & Property
+                Real Estate & Property <span className="coming-soon-badge">Coming Soon</span>
               </h3>
               <p
                 style={{
@@ -491,7 +491,7 @@ export default function AboutSection({ onOpenContact }) {
                   }}
                 >
                   <CheckCircle2 size={16} color="var(--agri-emerald)" />{" "}
-                  Commercial & Luxury Real Estate
+                  Commercial & Luxury Real Estate (Coming Soon)
                 </li>
                 <li
                   style={{

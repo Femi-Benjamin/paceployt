@@ -228,6 +228,25 @@ h6 {
   border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  line-height: 1.1;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.15);
+}
+
 /* Button Styles */
 .btn-primary {
   display: inline-flex;

@@ -112,7 +112,7 @@ export default function Navbar({ onOpenContact }) {
                 </Link>
                 <Link to="/divisions" className="navbar-dropdown-item">
                   <div className="navbar-dropdown-item-title-emerald">
-                    🏢 Real Estate & Property
+                    🏢 Real Estate & Property <span className="coming-soon-badge">Coming Soon</span>
                   </div>
                   <span className="navbar-dropdown-item-subtitle">
                     Commercial & Smart Property
@@ -217,7 +217,7 @@ export default function Navbar({ onOpenContact }) {
                   onClick={() => setMobileMenuOpen(false)}
                   className="navbar-mobile-accordion-link-emerald"
                 >
-                  🏢 Real Estate & Property
+                  🏢 Real Estate & Property <span className="coming-soon-badge">Coming Soon</span>
                 </Link>
               </div>
             )}

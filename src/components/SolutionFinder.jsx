@@ -44,7 +44,7 @@ export default function SolutionFinder({ onOpenContact }) {
       details:
         "Commercial & residential real estate development, architectural design, smart building tech integration, and high-yield property investment portfolios.",
       timeline: "Custom Deployment",
-      actionText: "Connect Real Estate Specialist",
+      actionText: "Connect Real Estate Specialist (Coming Soon)",
     },
   ];
 
@@ -161,6 +161,9 @@ export default function SolutionFinder({ onOpenContact }) {
                     }}
                   >
                     {opt.title}
+                    {opt.id === "real_estate" && (
+                      <span className="coming-soon-badge">Coming Soon</span>
+                    )}
                   </h4>
                 </div>
               </ScrollReveal>
@@ -197,6 +200,9 @@ export default function SolutionFinder({ onOpenContact }) {
                   }}
                 >
                   {currentOption.recommendation}
+                  {currentOption.id === "real_estate" && (
+                    <span className="coming-soon-badge">Coming Soon</span>
+                  )}
                 </h3>
                 <p
                   style={{

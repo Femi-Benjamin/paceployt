@@ -50,7 +50,7 @@ export default function DivisionsSection({ onOpenContact }) {
     real_estate: {
       id: "real_estate",
       name: "Real Estate & Property Development",
-      tagline: "Luxury Commercial & Smart Real Estate Assets",
+      tagline: "Luxury Commercial & Smart Real Estate Assets (Coming Soon)",
       icon: Building2,
       color: "var(--agri-emerald)",
       badgeBg: "rgba(16, 185, 129, 0.2)",
@@ -161,6 +161,9 @@ export default function DivisionsSection({ onOpenContact }) {
                     }}
                   >
                     {div.name}
+                    {div.id === "real_estate" && (
+                      <span className="coming-soon-badge">Coming Soon</span>
+                    )}
                   </span>
                 </button>
               );
@@ -212,6 +215,9 @@ export default function DivisionsSection({ onOpenContact }) {
                   }}
                 >
                   {current.name}
+                  {current.id === "real_estate" && (
+                    <span className="coming-soon-badge">Coming Soon</span>
+                  )}
                 </h3>
 
                 <p

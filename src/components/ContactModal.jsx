@@ -221,7 +221,7 @@ export default function ContactModal({ isOpen, onClose }) {
                   Corporate Consulting & Tech Advisory
                 </option>
                 <option value="real_estate">
-                  Real Estate & Smart Property Development
+                  Real Estate & Smart Property Development (Coming Soon)
                 </option>
               </select>
             </div>

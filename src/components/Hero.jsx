@@ -62,7 +62,7 @@ export default function Hero({ onOpenContact }) {
       title: "Real Estate & Property Development",
       description:
         "Delivering luxury commercial real estate, smart property development, architectural innovation, and high-yield property investments.",
-      tag: "PRIME ASSET SECTOR",
+      tag: "PRIME ASSET SECTOR — COMING SOON",
       color: "var(--agri-emerald)",
       stats: "Prime Property Portfolio",
     },
@@ -106,7 +106,7 @@ export default function Hero({ onOpenContact }) {
             >
               Pioneering Multidisciplinary Excellence Across{" "}
               <span className="gradient-text-purple">
-                Tech, Business & Real Estate
+                Tech, Business & Real Estate <span className="coming-soon-badge">Coming Soon</span>
               </span>
             </h1>
           </ScrollReveal>
@@ -230,7 +230,7 @@ export default function Hero({ onOpenContact }) {
                     fontSize: "0.8rem",
                   }}
                 >
-                  <Building2 size={14} /> Real Estate & Property
+                  <Building2 size={14} /> Real Estate & Property <span className="coming-soon-badge">Coming Soon</span>
                 </button>
               </div>
             </div>
@@ -273,6 +273,9 @@ export default function Hero({ onOpenContact }) {
                   </span>
                   <h3 style={{ fontSize: "1.3rem", fontWeight: 800 }}>
                     {sectorHighlights[activeSector].title}
+                    {activeSector === "real_estate" && (
+                      <span className="coming-soon-badge">Coming Soon</span>
+                    )}
                   </h3>
                 </div>
                 <p
