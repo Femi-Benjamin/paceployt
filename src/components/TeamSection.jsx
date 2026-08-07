@@ -178,11 +178,11 @@ export default function TeamSection({ onOpenContact }) {
     {
       id: 1,
       name: "Timothy",
-      role: "Founder & Chief Executive Officer",
+      role: "Founder & Admin Lead",
       division: "Business Strategy & Advisory",
       divisionColor: "amber",
       RoleIcon: Briefcase,
-      bio: "Guides operational transformation and market-entry strategy for growth-stage clients, with a particular focus on agri-tech adoption.",
+      bio: "Guides operational transformation and market-entry strategy for growth-stage clients, with a particular focus on business-tech adoption.",
       skills: [
         "Corporate Strategy",
         "Operations",
@@ -221,7 +221,7 @@ export default function TeamSection({ onOpenContact }) {
       id: 3,
       name: "George",
       role: "Head of Product & Design",
-      division: "Product & Experience",
+      division: "Product & User Experience",
       divisionColor: "emerald",
       RoleIcon: Palette,
       bio: "Shapes the interfaces and design systems behind every Paceployt build, keeping client products consistent, usable, and fast to ship.",
