@@ -210,7 +210,7 @@ export default function TeamSection({ onOpenContact }) {
         "Enterprise Strategy",
         "Venture Growth",
       ],
-      image: "/images/team_ceo.jpg?v=3",
+      image: "/images/team_software_engineer.png",
       socials: {
         linkedin: "https://www.linkedin.com/in/benjamin-olufemi-7524ab226",
         twitter: "https://twitter.com",
@@ -231,7 +231,7 @@ export default function TeamSection({ onOpenContact }) {
         "Product Strategy",
         "User Research",
       ],
-      image: "/images/team_designer.jpg?v=2",
+      image: "/images/team_product_ux.png",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",

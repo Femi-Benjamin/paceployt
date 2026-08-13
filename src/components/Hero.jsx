@@ -106,7 +106,8 @@ export default function Hero({ onOpenContact }) {
             >
               Pioneering Multidisciplinary Excellence Across{" "}
               <span className="gradient-text-purple">
-                Tech, Business & Real Estate <span className="coming-soon-badge">Coming Soon</span>
+                Tech, Business & Real Estate 
+                {/* <span className="coming-soon-badge">Coming Soon</span> */}
               </span>
             </h1>
           </ScrollReveal>
