@@ -20,10 +20,11 @@ export default function AboutSection({ onOpenContact }) {
         position: "relative",
       }}
     >
-      <div
+      {/* <div
         className="glow-spot-purple"
         style={{ top: "20%", right: "5%" }}
-      ></div>
+      ></div> 
+      */}
 
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
         {/* Section Header */}
@@ -457,7 +458,8 @@ export default function AboutSection({ onOpenContact }) {
                   marginBottom: "0.75rem",
                 }}
               >
-                Real Estate & Property <span className="coming-soon-badge">Coming Soon</span>
+                Real Estate & Property{" "}
+                <span className="coming-soon-badge">Coming Soon</span>
               </h3>
               <p
                 style={{

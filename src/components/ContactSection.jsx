@@ -30,10 +30,10 @@ export default function ContactSection() {
 
   return (
     <section id="contact" style={{ padding: "110px 0", position: "relative" }}>
-      <div
+      {/* <div
         className="glow-spot-purple"
         style={{ bottom: "-100px", left: "20%" }}
-      ></div>
+      ></div> */}
 
       <div
         className="container"
@@ -66,8 +66,8 @@ export default function ContactSection() {
           </h2>
           <p style={{ color: "var(--text-muted)", fontSize: "1.1rem" }}>
             Whether you want to build a digital product, consult on business
-            strategy, or invest in real estate (coming soon), we are ready to bring your ideas
-            to life.
+            strategy, or invest in real estate (coming soon), we are ready to
+            bring your ideas to life.
           </p>
         </div>
       </ScrollReveal>

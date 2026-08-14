@@ -95,10 +95,10 @@ export default function TestimonialsSection() {
       }}
     >
       {/* Background Radial Glow & Wireframe Grid Graphic */}
-      <div
+      {/* <div
         className="glow-spot-purple"
         style={{ top: "15%", left: "50%", transform: "translateX(-50%)" }}
-      ></div>
+      ></div> */}
 
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
         {/* Section Header */}

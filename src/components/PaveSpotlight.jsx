@@ -17,14 +17,14 @@ export default function PaveSpotlight({ onOpenContact }) {
       className="section-padding"
       style={{ position: "relative" }}
     >
-      <div
+      {/* <div
         className="glow-spot-purple"
         style={{ top: "10%", right: "5%" }}
       ></div>
       <div
         className="glow-spot-violet"
         style={{ bottom: "10%", left: "5%" }}
-      ></div>
+      ></div> */}
 
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
         <ScrollReveal variant="scale-up" delay={100}>

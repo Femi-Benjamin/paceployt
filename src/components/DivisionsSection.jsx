@@ -74,10 +74,10 @@ export default function DivisionsSection({ onOpenContact }) {
       id="divisions"
       style={{ padding: "110px 0", position: "relative" }}
     >
-      <div
+      {/* <div
         className="glow-spot-violet"
         style={{ top: "30%", left: "10%" }}
-      ></div>
+      ></div> */}
 
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
         {/* Section Header */}

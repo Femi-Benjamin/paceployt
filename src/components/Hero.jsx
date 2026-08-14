@@ -78,6 +78,7 @@ export default function Hero({ onOpenContact }) {
       }}
     >
       {/* Radial Background Glows */}
+      {/*
       <div
         className="glow-spot-purple"
         style={{ top: "-100px", right: "15%" }}
@@ -86,6 +87,7 @@ export default function Hero({ onOpenContact }) {
         className="glow-spot-violet"
         style={{ top: "250px", left: "-150px" }}
       ></div>
+      */}
 
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
         {/* Parent Group Badge */}
@@ -106,7 +108,7 @@ export default function Hero({ onOpenContact }) {
             >
               Pioneering Multidisciplinary Excellence Across{" "}
               <span className="gradient-text-purple">
-                Tech, Business & Real Estate 
+                Tech, Business & Real Estate
                 {/* <span className="coming-soon-badge">Coming Soon</span> */}
               </span>
             </h1>
@@ -231,7 +233,8 @@ export default function Hero({ onOpenContact }) {
                     fontSize: "0.8rem",
                   }}
                 >
-                  <Building2 size={14} /> Real Estate & Property <span className="coming-soon-badge">Coming Soon</span>
+                  <Building2 size={14} /> Real Estate & Property{" "}
+                  <span className="coming-soon-badge">Coming Soon</span>
                 </button>
               </div>
             </div>

@@ -6,7 +6,7 @@ import {
   ArrowRight,
   Crown,
   Briefcase,
-  Palette,
+  Server,
 } from "lucide-react";
 import "../index.css";
 
@@ -140,7 +140,11 @@ function SocialRow({ socials, name }) {
       )}
       {socials.twitter && (
         <a
-          href={socials.twitter}
+          href={
+            socials.twitter.startsWith("http")
+              ? socials.twitter
+              : `https://x.com/${socials.twitter.replace(/^@/, "")}`
+          }
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
@@ -213,28 +217,28 @@ export default function TeamSection({ onOpenContact }) {
       image: "/images/team_software_engineer.png",
       socials: {
         linkedin: "https://www.linkedin.com/in/benjamin-olufemi-7524ab226",
-        twitter: "https://twitter.com",
+        twitter: "https://x.com/Mr1Best",
         email: "mailto:contact@paceployt.com",
       },
     },
     {
       id: 3,
       name: "George",
-      role: "Head of Product & Design",
-      division: "Product & User Experience",
+      role: "IT LEADERSHIP",
+      division: "Head Of IT Operations",
       divisionColor: "emerald",
-      RoleIcon: Palette,
-      bio: "Shapes the interfaces and design systems behind every Paceployt build, keeping client products consistent, usable, and fast to ship.",
+      RoleIcon: Server,
+      bio: "Oversees IT infrastructure, system architecture, and technology operations ensuring secure, scalable, and reliable systems across all client environments.",
       skills: [
-        "UI/UX Architecture",
-        "Design Systems",
-        "Product Strategy",
-        "User Research",
+        "IT Infrastructure",
+        "Systems Integration",
+        "Technology Roadmap",
+        "Cloud Architecture",
       ],
       image: "/images/team_product_ux.png",
       socials: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
+        linkedin: "https://www.linkedin.com/in/george-olufemi-325655226",
+        twitter: "https://x.com/georgedotdev",
         email: "mailto:design@paceployt.com",
       },
     },
@@ -242,8 +246,8 @@ export default function TeamSection({ onOpenContact }) {
 
   return (
     <section id="team" className="team-section">
-      <div className="glow-spot-purple" />
-      <div className="glow-spot-violet" />
+      {/* <div className="glow-spot-purple" />
+      <div className="glow-spot-violet" /> */}
 
       <div className="container">
         <ScrollReveal animation="fade-up" duration={700}>

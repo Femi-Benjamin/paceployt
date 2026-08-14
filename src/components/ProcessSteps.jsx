@@ -62,10 +62,10 @@ export default function ProcessSteps({ onOpenContact }) {
         borderTop: "1px solid rgba(91, 26, 234, 0.2)",
       }}
     >
-      <div
+      {/* <div
         className="glow-spot-purple"
         style={{ top: "10%", right: "20%" }}
-      ></div>
+      ></div> */}
 
       <div className="container" style={{ position: "relative", zIndex: 2 }}>
         {/* Section Header */}
