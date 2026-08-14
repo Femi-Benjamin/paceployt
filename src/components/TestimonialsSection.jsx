@@ -10,6 +10,7 @@ import {
 
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(2); // Center on middle card by default
+  const [isPaused, setIsPaused] = useState(false);
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 1200,
   );
@@ -19,6 +20,15 @@ export default function TestimonialsSection() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Auto-scroll effect
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev < 4 ? prev + 1 : 0));
+    }, 6500); // Slow scroll pace
+    return () => clearInterval(interval);
+  }, [isPaused]);
 
   const isMobile = windowWidth < 640;
   const isTablet = windowWidth >= 640 && windowWidth < 1024;
@@ -139,8 +149,12 @@ export default function TestimonialsSection() {
         </ScrollReveal>
 
         {/* 3D Coverflow Container */}
-        <ScrollReveal variant="scale-up" delay={150}>
+        <ScrollReveal variant="scale-up" delay={150} duration={900}>
           <div
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
             style={{
               position: "relative",
               height: isMobile ? "400px" : isTablet ? "440px" : "470px",
@@ -258,7 +272,7 @@ export default function TestimonialsSection() {
                     transform: `translateX(${translateX}px) scale(${scale}) rotateY(${rotateY}deg)`,
                     opacity: opacity,
                     zIndex: zIndex,
-                    transition: "all 0.45s cubic-bezier(0.25, 1, 0.5, 1)",
+                    transition: "all 0.9s cubic-bezier(0.25, 1, 0.5, 1)",
                     cursor: isCenter ? "default" : "pointer",
                     pointerEvents: opacity === 0 ? "none" : "auto",
                   }}
