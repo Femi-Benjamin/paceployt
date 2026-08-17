@@ -195,7 +195,7 @@ export default function TeamSection({ onOpenContact }) {
       ],
       image: "/images/team_consultant.jpg?v=2",
       socials: {
-        linkedin: "https://linkedin.com",
+        linkedin: "https://linkedin.com/in/timothy-uche-497825162",
         twitter: "https://twitter.com",
         email: "mailto:consulting@paceployt.com",
       },
